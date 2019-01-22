@@ -572,7 +572,7 @@ exists that does not flow through the filter, Awas will display it.</p>
 </li>
 </ol>
 <p>The following query can Awas query can answer <a class="reference internal" href="#query-4">Query 4</a>.</p>
-<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_refined_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">refined </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"> to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="err"> </span><span class="nc">with</span><span class="err"> </span><span class="nc">none</span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL</span><span class="kr">:</span><span class="nc">port</span><span class="p">)</span>
+<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_refined_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">refined </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"> to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span> <span class="kr">with</span> <span class="kr">none</span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL</span><span class="kr">:port</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>On clicking the query name from the query view table, you should see <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">empty</span></code> message on the bottom right of the screen.</p>
@@ -618,7 +618,7 @@ on top of it.</p>
 <ol class="arabic" start="7">
 <li><p class="first">Is only authorized and well-formed map reaches the flight controller?</p>
 <p>We can check this using Awas by the following query:</p>
-<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:</span><span class="nc">port</span><span class="err">-</span><span class="nc">error</span><span class="p">)</span><span class="kr"> to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:</span><span class="nc">port</span><span class="err">-</span><span class="nc">error</span><span class="p">)</span>
+<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"> to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
