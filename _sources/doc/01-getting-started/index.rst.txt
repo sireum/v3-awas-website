@@ -16,8 +16,9 @@
 
 Getting Started
 ###############
-x64 macOS, Linux, and Windows
-operating systems in Google Chrome and Mozilla Firefox browsers.  
+
+Sireum Awas is supported in x64 macOS, Linux, and Windows operating systems,
+and in Google Chrome and Mozilla Firefox browsers.
 
 There three ways one can obtain Awas:
 
