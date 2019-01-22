@@ -144,11 +144,11 @@ clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('copyMacDevelopment'));
 </script><ol class="arabic simple" start="3">
 <li>Expand the <code class="docutils literal notranslate"><span class="pre">Sireum</span></code> option and select <code class="docutils literal notranslate"><span class="pre">Sireum</span> <span class="pre">Awas</span> <span class="pre">plugin</span></code> to
-install then click <code class="docutils literal notranslate"><span class="pre">Next</span></code></li>
+install, and then click <code class="docutils literal notranslate"><span class="pre">Next</span></code></li>
 </ol>
 <img alt="../../_images/plugin-install-1.png" src="../../_images/plugin-install-1.png" />
 <ol class="arabic simple" start="4">
-<li>Accept the license aggrement and click <code class="docutils literal notranslate"><span class="pre">Finish</span></code></li>
+<li>Accept the license agreement and click <code class="docutils literal notranslate"><span class="pre">Finish</span></code></li>
 </ol>
 <p>Once installed restart the Osate to use Awas.</p>
 </div>
@@ -179,6 +179,9 @@ resolver and dependency.</p>
 </div>
 <div class="section" id="sireum-awas-source-distribution">
 <span id="using-awas-source"></span><h2>1.3. Sireum Awas source distribution<a class="headerlink" href="#sireum-awas-source-distribution" title="Permalink to this headline">¶</a></h2>
+<p>Awas is part of a broader set of tool platform called
+Sireum. Therefore, the first step in setting up the Awas development
+environmet is obtaining Sireum IVE for development.</p>
 <div class="section" id="prerequisites">
 <h3>1.3.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
@@ -206,8 +209,8 @@ sireum-v3/aadl/ir
 </pre></div>
 </div>
 </li>
-<li><p class="first">Follow the <a href="#id4"><span class="problematic" id="id5">`OSATE developement environment`_</span></a> webpage for Sireum
-Awas plugin development Eclipse is the underlying IDE being used in
+<li><p class="first">Follow the <a class="reference external" href="http://osate.org/setup-development.html">OSATE development environment</a> webpage for Sireum
+Awas plugin development. Eclipse is the underlying IDE being used in
 OSATE development so the rest of these instructions will refer to
 the IDE as <code class="docutils literal notranslate"><span class="pre">Eclipse</span></code>.</p>
 </li>
@@ -223,22 +226,24 @@ the IDE as <code class="docutils literal notranslate"><span class="pre">Eclipse<
 <div class="section" id="building-sireum-awas-jar">
 <span id="id2"></span><h4>1.3.2.1. Building Sireum Awas Jar<a class="headerlink" href="#building-sireum-awas-jar" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
-<li><p class="first">From the parent directory of <code class="docutils literal notranslate"><span class="pre">sireum-v3</span></code> cloned in the previous
-step clone awas repository
-- Using HTTPS:</p>
+<li><p class="first">From the parent directory of <code class="docutils literal notranslate"><span class="pre">sireum-v3</span></code> from the previous
+step, clone the awas repository</p>
+<ul>
+<li><p class="first">Using HTTPS:</p>
 <div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/sireum/v3-awas.git
 sireum-v3/awas
 </pre></div>
 </div>
-<ul class="simple">
-<li>Using SSH:</li>
-</ul>
+</li>
+<li><p class="first">Using SSH:</p>
 <div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sireum/v3-awas.git
 sireum-v3/awas
 </pre></div>
 </div>
 </li>
-<li><p class="first">Following <a class="reference external" href="https://github.com/sireum/v3#setting-up-sireum-ive-for-sireum-v3-development">Setting up Sireum IVE</a> to setup the devlopment
+</ul>
+</li>
+<li><p class="first">Follow the <a class="reference external" href="https://github.com/sireum/v3#setting-up-sireum-ive-for-sireum-v3-development">Setting up Sireum IVE</a> document to setup the devlopment
 environment</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -299,7 +304,7 @@ and click <code class="docutils literal notranslate"><span class="pre">Finish</s
 <ol class="arabic simple">
 <li>Open an AADL model in OSATE and build an instance model (follow
 <a class="reference external" href="https://wiki.sei.cmu.edu/aadl/index.php/Editing_a_first_AADL_model">these</a> instructions to create an instance model)</li>
-<li>Select a system implementation from the <code class="docutils literal notranslate"><span class="pre">Outline</span></code> and select
+<li>Select a system implementation from the <code class="docutils literal notranslate"><span class="pre">Outline</span> <span class="pre">view</span></code> and select
 <code class="docutils literal notranslate"><span class="pre">OSATE</span> <span class="pre">&gt;</span> <span class="pre">Sireum</span> <span class="pre">Bridge</span> <span class="pre">&gt;</span> <span class="pre">Generate</span> <span class="pre">Awas</span> <span class="pre">Visulaizer</span></code> from the menu
 bar</li>
 <li>In the popup, select a directory to save the generated Awas visualizer.</li>

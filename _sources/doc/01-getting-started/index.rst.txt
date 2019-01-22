@@ -60,11 +60,11 @@ can be installed as a plugin in OSATE.
 
 
 3. Expand the ``Sireum`` option and select ``Sireum Awas plugin`` to
-   install then click ``Next``
+   install, and then click ``Next``
 
 .. image:: plugin-install-1.png
 
-4. Accept the license aggrement and click ``Finish``
+4. Accept the license agreement and click ``Finish``
 
 Once installed restart the Osate to use Awas.
 
@@ -101,12 +101,16 @@ resolver and dependency.
 Sireum Awas source distribution
 *******************************
 
+Awas is part of a broader set of tool platform called
+Sireum. Therefore, the first step in setting up the Awas development
+environmet is obtaining Sireum IVE for development. 
+
 Prerequisites
 =============
 
 .. _Sireum: https://github.com/sireum/v3
-.. _OSATE development environment:
-   http://osate.org/setup-development.html
+
+.. _OSATE development environment: http://osate.org/setup-development.html
 
 1. Install the required tools for building Sireum: bash, git, unzip,
    wget, bc
@@ -131,8 +135,8 @@ Prerequisites
 	     sireum-v3 git clone git@github.com:sireum/air.git
 	     sireum-v3/aadl/ir
 	     
-4. Follow the `OSATE developement environment`_ webpage for Sireum
-   Awas plugin development Eclipse is the underlying IDE being used in
+4. Follow the `OSATE development environment`_ webpage for Sireum
+   Awas plugin development. Eclipse is the underlying IDE being used in
    OSATE development so the rest of these instructions will refer to
    the IDE as ``Eclipse``.
 
@@ -155,22 +159,24 @@ There two steps in building Sireum Awas from source
 Building Sireum Awas Jar
 ------------------------
 
-1. From the parent directory of ``sireum-v3`` cloned in the previous
-   step clone awas repository
+1. From the parent directory of ``sireum-v3`` from the previous
+   step, clone the awas repository
+   
    - Using HTTPS:
      
-   .. code:: bash
+     .. code:: bash
 	     
 	     git clone https://github.com/sireum/v3-awas.git
 	     sireum-v3/awas
+
    - Using SSH:
      
-   .. code:: bash
+     .. code:: bash
 	     
 	     git clone git@github.com:sireum/v3-awas.git
 	     sireum-v3/awas
 
-2. Following `Setting up Sireum IVE`_ to setup the devlopment
+2. Follow the `Setting up Sireum IVE`_ document to setup the devlopment
    environment
    
    .. note:: Enable the ``Use sbt shell for build and import`` option
@@ -236,7 +242,7 @@ Running Awas
 1. Open an AADL model in OSATE and build an instance model (follow
    these_ instructions to create an instance model)
    
-2. Select a system implementation from the ``Outline`` and select
+2. Select a system implementation from the ``Outline view`` and select
    ``OSATE > Sireum Bridge > Generate Awas Visulaizer`` from the menu
    bar
 
