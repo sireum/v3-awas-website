@@ -397,10 +397,10 @@ level these requirements are simply connectivity among components. In
 order to check for the satisfactory of the requirements by the model
 the analyst may pose the following questions and use Awas in the
 process of finding the solution.</p>
-<ol class="arabic" id="query-1">
-<li><p class="first">If ground station sends the map, Where does information regarding
-the map flow”? and where is it getting consumed?</p>
-<p>A user can use awas by selecting the port <code class="docutils literal notranslate"><span class="pre">send_map</span></code> in the
+<dl class="docutils" id="query-1">
+<dt>Query 1</dt>
+<dd><p class="first">If ground station sends the map, Where does information regarding the map flow? and where is it getting consumed?</p>
+<p class="last">A user can use awas by selecting the port <code class="docutils literal notranslate"><span class="pre">send_map</span></code> in the
 component ground station and clicking the <code class="docutils literal notranslate"><span class="pre">Forward</span></code> button on the
 top of the screen. This highlights the all the ports that receives
 the information from <code class="docutils literal notranslate"><span class="pre">send_map</span></code>. The flow that is highlighted
@@ -408,18 +408,19 @@ with a darker shade indicates consumption of this information. If
 the user wants to do down the hierarchy they can double click on
 the <code class="docutils literal notranslate"><span class="pre">UAV</span></code> component to see the influence of <code class="docutils literal notranslate"><span class="pre">send_map</span></code> in the
 subsystems.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <a class="reference internal image-reference" href="../../_images/intra_forward.png"><img alt="Forward from send_map" class="align-center" src="../../_images/intra_forward.png" style="width: 100%;" /></a>
-<ol class="arabic" id="query-2" start="2">
-<li><p class="first">From where does information needed to compute the <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> flow from?</p>
-<p>The user can select the port <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> and click on the
+<dl class="docutils" id="query-2">
+<dt>Query 2</dt>
+<dd><p class="first">From where does information needed to compute the <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> flow from?</p>
+<p class="last">The user can select the port <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> and click on the
 <code class="docutils literal notranslate"><span class="pre">Backward</span></code> button on the top right of the screen. This action
 highlights all the ports through which the information needed by
 <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> flows. Also highlights the flows that sources the
 information in a darker shade.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <a class="reference internal image-reference" href="../../_images/backward_click.png"><img alt="Backward from recv_status" class="align-center" src="../../_images/backward_click.png" style="width: 100%;" /></a>
 <div class="section" id="dependency-analysis-using-queries">
 <h3>2.4.1. Dependency Analysis Using Queries<a class="headerlink" href="#dependency-analysis-using-queries" title="Permalink to this headline">¶</a></h3>
@@ -491,17 +492,18 @@ both the queries.</p>
 <h3>2.4.2. Complex Queries<a class="headerlink" href="#complex-queries" title="Permalink to this headline">¶</a></h3>
 <p>The query language’s capability goes beyond the simple queries. Using
 the queries the analyst can pose some of the interesting questions such as</p>
-<ol class="arabic" id="query-3" start="3">
-<li><p class="first">when the ground station is sending the map, how does it get to the flight controller?</p>
-<p>The important distinction between <a class="reference internal" href="#query-3">Query 3</a> and the previous
+<dl class="docutils" id="query-3">
+<dt>Query 3</dt>
+<dd><p class="first">when the ground station is sending the map, how does it get to the flight controller?</p>
+<p class="last">The important distinction between <a class="reference internal" href="#query-3">Query 3</a> and the previous
 queries is the number of arguments in the query. In this query, the
 analyst ask is it possible to reach flight controller from ground
 station, if so show how is it possible? in the previous queries we
 asked, how is the information flowing into or out of a specific
 node, port or error token. Here we are asking if we start from a
 source is it possible to reach a destination of interest.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <div class="section" id="source-to-destination-query">
 <h4>2.4.2.1. Source to Destination Query<a class="headerlink" href="#source-to-destination-query" title="Permalink to this headline">¶</a></h4>
 <a class="reference internal image-reference" href="../../_images/query_chop.png"><img alt="Query with source and destination" class="align-center" src="../../_images/query_chop.png" style="width: 100%;" /></a>
@@ -561,16 +563,17 @@ one can use the term <code class="docutils literal notranslate"><span class="pre
 analyst wish to see only the paths flowing through a component of
 interest. In these situations the filtering capability of Awas come in
 handy.</p>
-<ol class="arabic" id="query-4" start="4">
-<li><p class="first">When the ground station is sending the map, is it always flowing through the filter component?</p>
-<p>The filter component in the <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code> subsystem filters out the
+<dl class="docutils" id="query-4">
+<dt>Query 4</dt>
+<dd><p class="first">When the ground station is sending the map, is it always flowing through the filter component?</p>
+<p class="last">The filter component in the <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code> subsystem filters out the
 maps that are not well-formed. An Analyst can check this by asking
 is there a path from ground station to flight controller without
 going through filter. If there are no paths found then we can come
 to a conclusion that all the paths flow through filter. If a path
 exists that does not flow through the filter, Awas will display it.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <p>The following query can Awas query can answer <a class="reference internal" href="#query-4">Query 4</a>.</p>
 <div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_refined_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">refined </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"> to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span> <span class="kr">with</span> <span class="kr">none</span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL</span><span class="kr">:port</span><span class="p">)</span>
 </pre></div>
@@ -604,10 +607,12 @@ exists that does not flow through the filter, Awas will display it.</p>
 can model the error behavior of the system. Using Awas, the analyst
 can compute the flow of errors in the system and may pose the
 following questions:</p>
-<ol class="arabic simple" start="5">
-<li>Is there a possibility of hazard situation over the course of the system?</li>
-<li>What is the root cause for a specific hazardous situation?</li>
-</ol>
+<dl class="docutils">
+<dt>Query 5</dt>
+<dd>Is there a possibility of hazardous situation arising over the course of the system operation?</dd>
+<dt>QUery 6</dt>
+<dd>What are the root causes for a specific hazardous situation?</dd>
+</dl>
 <p>In our UAV system, we do not have any defined safety constraints
 yet. However, we to have some of the security related
 properties. Using Awas, the analyst can check some simple behavior
@@ -615,18 +620,19 @@ properties. In the UAV system, one of the security property is that,
 only the authorized party can communicate with the UAV. We can abuse
 the AADL EMV2 mechanism to model these simple properties and use Awas
 on top of it.</p>
-<ol class="arabic" start="7">
-<li><p class="first">Is only authorized and well-formed map reaches the flight controller?</p>
+<dl class="docutils">
+<dt>Query 7</dt>
+<dd><p class="first">Is only authorized and well-formed map reaches the flight controller?</p>
 <p>We can check this using Awas by the following query:</p>
-<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"> to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
+<div class="code last highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"> to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-</ol>
+</dd>
+</dl>
 <p>To view the results, first we have to enable the <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">errors</span></code> check
 box in the view settings. On clicking on the query name form the query
 view, we can notice only the <code class="docutils literal notranslate"><span class="pre">wellformed_authenticated</span></code> token is
-highlighted. This shows only either <code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> or
+highlighted. This shows neither <code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> nor
 <code class="docutils literal notranslate"><span class="pre">not_wellformed</span></code> reaches the flight controller.</p>
 <a class="reference internal image-reference" href="../../_images/query_error_tokens.png"><img alt="Query with error tokens" class="align-center" src="../../_images/query_error_tokens.png" style="width: 100%;" /></a>
 </div>
