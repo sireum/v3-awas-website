@@ -661,8 +661,20 @@ Query 7
    We can check this using Awas by the following query:
 
    .. code::
+      
 
-      only_wellformed_authorized = reach paths from (UAS_Impl_Instance.GND.send_map:port-error) to (UAS_Impl_Instance.UAV.FCTL.waypoint:port-error)
+      only_wellformed_authorized = reach paths from (UAS_Impl_Instance.GND.send_map:port-error)
+                                                 to (UAS_Impl_Instance.UAV.FCTL.waypoint:port-error)
+
+   .. raw:: html
+
+      </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+      <button id="copyMacDevelopment"
+      data-clipboard-text="only_wellformed_authorized = reach paths from (UAS_Impl_Instance.GND.send_map:port-error) to (UAS_Impl_Instance.UAV.FCTL.waypoint:port-error)">
+      <img height="20" src="../../_static/clippy.svg" alt="Copy to
+      clipboard"/> </button> </td> </tr> </table> <script> new
+      Clipboard(document.getElementById('copyMacDevelopment'));
+      </script>   
 
       
 To view the results, first we have to enable the ``view errors`` check

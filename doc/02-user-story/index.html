@@ -624,10 +624,17 @@ on top of it.</p>
 <dt>Query 7</dt>
 <dd><p class="first">Is only authorized and well-formed map reaches the flight controller?</p>
 <p>We can check this using Awas by the following query:</p>
-<div class="code last highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"> to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
+<div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"></span>
+<span class="kr">                                           to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd>
+<div class="last"></td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+<button id="copyMacDevelopment"
+data-clipboard-text="only_wellformed_authorized = reach paths from (UAS_Impl_Instance.GND.send_map:port-error) to (UAS_Impl_Instance.UAV.FCTL.waypoint:port-error)">
+<img height="20" src="../../_static/clippy.svg" alt="Copy to
+clipboard"/> </button> </td> </tr> </table> <script> new
+Clipboard(document.getElementById('copyMacDevelopment'));
+</script></div></dd>
 </dl>
 <p>To view the results, first we have to enable the <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">errors</span></code> check
 box in the view settings. On clicking on the query name form the query
