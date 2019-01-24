@@ -26,30 +26,29 @@ Sireum Awas User Stories
 .. image:: viz_big.png
    :align: center
    :width: 100%
-   :target: ../../_static/simple_uav/index.html
 
 Sireum Awas Capabilities
 ************************
 
-* Model explorer: Enables the user to explore a system's model without
-  installing modeling tools. Provides the freedom of refering the
+* Model Explorer: Enables the user to explore a system's model without
+  installing modeling tools. Provides the freedom of referring the
   model from both handheld devices and desktops. The user can hide
-  irrelavent part of the model and focus on a specific level of
+  irrelevant part of the model and focus on a specific level of
   modeling detail
 
 ----
 
-* Dependency analysis: A system is a composition of components and
-  Awas provides insight in the intraction of components using
+* Dependency Analysis: A system is a composition of components and
+  Awas provides insight into the interaction of components using
   component dependency
 
 ----
 
 * Risk Analysis: The user can encode abstract error behavior of a
-  component as an error token. Using Awas, a user can produce witness
-  showcasing the exisistence or lack of errors in the system. This
-  token propagation mechanism can be generalized to capture certain
-  behavior of the system
+  component as an error token. Using Awas, a user can produce a
+  witness showcasing the existence or lack of errors in the
+  system. This token propagation mechanism can be generalized to
+  capture infomration flow behaviors of the system
 
 	   
 Simple UAV System
@@ -57,14 +56,16 @@ Simple UAV System
 
 Before showing you the various ways you can use Awas, let me describe
 a simple example architecture of a UAV surveillance system. The
-primary functionality of this UAV is to conduct surveillance over a
+primary function of this UAV is to conduct surveillance over a
 specified region. This UAV receives the region information from a
-ground station. The UAV itself consists of a computer and a flight
-controller. The purpose of the computer is to compute a set of
-waypoints from a map and a flight pattern provided by the ground
-station. The flight controller act upon these waypoints to progress on
-the survillence task. Whenever the UAV reaches a waypoint, it sends
-out a status information the ground station.
+ground station, and in turn, the UAV sends back status information.
+
+This UAV consists of a computer and a flight controller. The purpose
+of the computer is to compute a set of waypoints from a map and a
+flight pattern provided by the ground station. The flight controller
+acts upon these waypoints to progress on the surveillance
+task. Whenever the UAV reaches a waypoint, it sends out status
+information back to the ground station.
 
 .. image:: uas.png
    :align: center
@@ -116,19 +117,18 @@ UAS: The top level system with ground station and UAV
   </div>
 
 
-You can see that both AADL diagram and Awas graph consists of three
-components namely GND, UAV, and RFB. However, the similarities end
-here, Awas explicitly segregates input and output ports. For in-out
-ports, Awas creates two ports one for input and the other for
+You can see that both the AADL diagram and the Awas graph consists of
+three components namely GND, UAV, and RFB. However, the similarities
+end here, Awas explicitly segregates input and output ports. For
+in-out ports, Awas creates two ports one for input and the other for
 output. Thus you can see there are two RFA ports in GND component in
-the Awas side and only one in the AADL side. This also enables Awas
-to separate out the bidirectional connections into two separate
-connections.
+the Awas side and only one in the AADL side. Awas also separates the
+bidirectional connections into two separate connections.
 
 Awas provides the following capabilities over OSATE:
 
 1. In Awas, the diagrams are interactive
-2. Users can click on a node(component and connection), port and edge, and it will get highlighted. 
+2. Users can click on a node(component and connection), port, or an edge to highlight it 
 3. On clicking an edge which represents an AADL connection, Awas
    highlights the edge and also the ports involved in the
    connection. Although, AADL diagrams look cleaner, in a complex
@@ -138,9 +138,9 @@ Awas provides the following capabilities over OSATE:
    .. raw:: html
 		  
      This icon <img src="../../_static/sub-graph-icon.png" alt="Sub-graph" style="width:1%"> in front of a component name
-     indicates that this node contains a sub-system and the graph
-     for the sub-system can be opened by double clicking on the
-     component's name
+     indicates that this node contains a sub-system. By double-clicking on this node, you can open the sub-system's graph
+
+
        
      
 UAV - Composed of Mission computer and Flight Controller
@@ -177,8 +177,8 @@ UAV - Composed of Mission computer and Flight Controller
   </div>
 
 In a sub-system graph, Awas creates the parent component's ports as
-node. The node ``recv_map`` is same as the port in the UAV component
-from the `UAS system`_. Therefore, all interaction on this node are
+nodes. The node ``recv_map`` is same as the port in the UAV component
+from the `UAS system`_. Therefore, all interaction on this node is
 mimicked on to the port in the parent component.
   
 
@@ -216,14 +216,14 @@ Mission computer - Composed of Radio, UART and Software Components
   </div>
   </div>
 
-You can see that in Awas graph, there are lot more edges when
-compared to the AADL diagram. This is due to the edges capturing the
+You can see that in Awas graph, there are lot more edges when compared
+to the AADL diagram. The additional edges are the edges capturing the
 binding relationship. For example, the component ``PROC_SW`` has two
 ports ``processor_IN`` and ``processor_OUT`` connecting the component
 ``PROC_HW``. These edges capture the relation that the ``PROC_SW``
 representing the software of the system executes on the hardware
-``PROC_HW``. However, AADL diagrams fails to capture these binding
-relations and the non trivial information flow through them.
+``PROC_HW``. However, AADL diagrams fail to capture these binding
+relations and the non-trivial information flow through them.
 	 
 
 Software - Composed of drivers and logic for computing the waypoints
@@ -258,29 +258,47 @@ Software - Composed of drivers and logic for computing the waypoints
   <img src="../../_static/awas_sw.png" alt="Awas" style="width:1000%">
   </div>
   </div>
-  	 
+
+The Software system consists of drivers for the radio device for
+communicating with the ground station and the UART for communicating
+with the flight controller. Apart from the drivers, the software
+system consists of a filter to check the wellformedness of the map and
+the components to convert the map into waypoints. 
 
 Awas Visualizer Interface
 =========================
 
-* talk briefly about the entire UI
+Awas visulaizer is a single page web appication. At the top of the
+page there are five buttons. The first one form the right is the
+``Settings`` button to control the amont of information displayed in
+the Awas graph. The next button is the ``Awas Query`` button. This can
+open the query interpreter and the results table view. The next three
+buttons are used in the dependency analysis.
 
-* buttons on the top
-
-* re-organizable windows
-
-* Query view
-
-* CLI interpreter 
+Below the top bar is the Awas graph viewer. Each system in the AADL
+becomes an Awas Graph. The user can view multiple system at the same
+time by reorganizing the graph viewer window. The top left of the
+graph viewer informs the system name and the hierarchy from the top
+level system.
   
 View Options
 ============
-Using Awas a user can decide what are all the information in a component to view and what to hide. 
+
+Using Awas a user can decide what are all the information in a
+component to view and what to hide. By clicking the `Settings` button,
+the user can open the view options panel. 
 
 
 .. image:: view_settings.png
    :align: center	   
    :alt: Awas View Settings
+
+.. warning::
+   The `view binding edges` option in the view option panel,
+   modifies the underlying graph data structure. On large graphs this
+   toggle make take a few seconds to complete. Also, do not perform
+   path queries in the presence of a large number of binding
+   edges. This can cause drastic decline in query evaluation performance 
 
 Flows
 -----
@@ -346,22 +364,27 @@ requirements gathering phase. During the designing phase, a system
 designer develops models satisfying these requirements. At a high
 level these requirements are simply connectivity among components. In
 order to check for the satisfactory of the requirements by the model
-the analyst may pose the following questions and use Awas in the
-process of finding the solution.
+the analyst can utilize Awas to project the component dependencies.
+
+Forward and Backward Analysis
+=============================
+
+Awas can do two kinds of basic dependency analysis. The analyst can
+use them to answer specific questions such as the following:
 
 .. _Query 1: 
 
 Query 1
    If ground station sends the map, Where does information regarding the map flow? and where is it getting consumed?
 
-   A user can use awas by selecting the port ``send_map`` in the
-   component ground station and clicking the ``Forward`` button on the
-   top of the screen. This highlights the all the ports that receives
-   the information from ``send_map``. The flow that is highlighted
-   with a darker shade indicates consumption of this information. If
-   the user wants to do down the hierarchy they can double click on
-   the ``UAV`` component to see the influence of ``send_map`` in the
-   subsystems. 
+   To find the solution the analyst can use awas by selecting the port
+   ``send_map`` in the component ground station and clicking the
+   ``Forward`` button on the top of the screen. This highlights the
+   all the ports that receives the information from ``send_map``. The
+   flow that is highlighted with a darker shade indicates consumption
+   of this information. If the user wants to go down the hierarchy
+   they can double click on the ``UAV`` component to see the influence
+   of ``send_map`` in the subsystems.
 
    
 .. image:: intra_forward.png
@@ -432,11 +455,24 @@ You can see this tab contains two other tabs
    click allows the user to save and execute the same during
    regression testing.
 
-   .. _forward reach query: 
+   .. _forward reach query:
+
+   .. raw:: html
+
+      <table width="100%" > <tr> <td>
 
    .. code:: bash
 
       forward_GND_send_map = reach forward UAS_Impl_Instance.GND.send_map
+
+   .. raw:: html
+
+      </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+      <button id="forward_GND_send_map = reach forward UAS_Impl_Instance.GND.send_map">
+      <img height="20" src="../../_static/clippy.svg" alt="Copy to
+      clipboard"/> </button> </td> </tr> </table> <script> new
+      Clipboard(document.getElementById('copyMacDevelopment'));
+      </script> 
 
    In this query statement, the term before ``=`` is the name of the
    query and everything else is the query expression.
@@ -473,10 +509,23 @@ The query ``backward_GND_status`` performs the same action as the
 `Query 2`_. By clicking on the button ``backward_GND_status`` without
 clearing the result of the previous query we can see the results of
 both the queries.
+
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
 	 
 .. code::
 	  
-   backward_GND_status = reach backward UAS_Impl_Instance.GND.recv_status	 
+   backward_GND_status = reach backward UAS_Impl_Instance.GND.recv_status
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="backward_GND_status = reach backward UAS_Impl_Instance.GND.recv_status">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script> 
 	 
 
 Complex Queries
@@ -510,9 +559,22 @@ Source to Destination Query
 
 The following Awas query statement captures the analyst's `Query 3`_
 
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
+
 .. code::
    
    GS_flight_controller = reach from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="copyMacDevelopment"data-clipboard-text="GS_flight_controller = reach from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script> 
 
 This is again a reach expression. However, the direction of the
 reachability is replaced by the term ``from`` followed by the
@@ -532,9 +594,23 @@ and destination, there are multiple ways information can flow from
 source to destination. If one wish to enumerate all the individual
 paths, they can alter the above Awas query as follows
 
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
+
 .. code::
    
-   GS_flight_controller_paths = reach paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint
+   GS_flight_controller_paths = reach paths from UAS_Impl_Instance.GND.send_map
+                                              to UAS_Impl_Instance.UAV.FCTL.waypoint
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="copyMacDevelopment"data-clipboard-text="GS_flight_controller_paths = reach paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script> 
 
 The addition of the term ``paths`` instructs Awas to enumerate all the
 paths. This suddenly convert the simple reachability problem into a
@@ -557,9 +633,25 @@ name which indicates the existence of more than one path. On clicking
 the arrow, one can view the list of paths. If one wish to obtain only
 the paths without any cycle, then they can use the keyword ``simple``.
 
+
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
+
 .. code::
    
-   GS_flight_controller_simple_paths = reach simple paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint
+   GS_flight_controller_simple_paths = reach simple paths from UAS_Impl_Instance.GND.send_map
+                                                            to UAS_Impl_Instance.UAV.FCTL.waypoint
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="copyMacDevelopment"
+   data-clipboard-text="GS_flight_controller_simple_paths = reach simple paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script>   
    
 The result of the above query list three paths. Yet, we know there is
 only one path from the ground station ``send_map`` to the flight
@@ -567,11 +659,26 @@ controller ``waypoint``. This doesn't mean Awas is incorrect. Awas is
 producing all the paths which includes the abstract paths that flow
 using a components internal flow. To obtain only the refined paths,
 one can use the term ``refined`` in the query.
-	 
+
+
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
 
 .. code::
    
-   GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint
+   GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map
+                                                            to UAS_Impl_Instance.UAV.FCTL.waypoint
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="copyMacDevelopment"
+   data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script>   							   
    
 
 .. image:: query_result_ans.png
@@ -605,9 +712,26 @@ Query 4
 
 The following query can Awas query can answer `Query 4`_.
 
+.. raw:: html
+
+   <table width="100%" > <tr> <td>
+
 .. code::
 
-    GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)
+    GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map
+                                                               to UAS_Impl_Instance.UAV.FCTL.waypoint
+							          with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)
+
+
+.. raw:: html
+
+   </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+   <button id="copyMacDevelopment"
+   data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)">
+   <img height="20" src="../../_static/clippy.svg" alt="Copy to
+   clipboard"/> </button> </td> </tr> </table> <script> new
+   Clipboard(document.getElementById('copyMacDevelopment'));
+   </script>       
 
 On clicking the query name from the query view table, you should see ``The result is empty`` message on the bottom right of the screen.
 
@@ -660,6 +784,10 @@ Query 7
 
    We can check this using Awas by the following query:
 
+   .. raw:: html
+
+      <table width="100%" > <tr> <td>
+   
    .. code::
       
 
@@ -699,7 +827,7 @@ Roadmap
     1. Use web workers to parallelly render in the browser
     2. launch a local server when the awas visualizer is opened and process in the server
 
-  .. note::
+  .. Warning::
      Do not perform path queries when the ``View binding
      edges`` option is enabled. For a large system with a lot of
      binding edges, this may take a while to compute.

@@ -103,7 +103,7 @@ Sireum Awas source distribution
 
 Awas is part of a broader set of tool platform called
 Sireum. Therefore, the first step in setting up the Awas development
-environmet is obtaining Sireum IVE for development. 
+environmet is to obtaining Sireum IVE for development. 
 
 Prerequisites
 =============
@@ -135,10 +135,10 @@ Prerequisites
 	     sireum-v3 git clone git@github.com:sireum/air.git
 	     sireum-v3/aadl/ir
 	     
-4. Follow the `OSATE development environment`_ webpage for Sireum
-   Awas plugin development. Eclipse is the underlying IDE being used in
-   OSATE development so the rest of these instructions will refer to
-   the IDE as ``Eclipse``.
+4. Follow the `OSATE development environment`_ webpage for Sireum Awas
+   plugin development. Eclipse is the underlying IDE being used in the
+   OSATE development so the rest of plugin development instructions
+   will refer to the IDE as ``Eclipse``.
 
 
 	     
@@ -181,7 +181,21 @@ Building Sireum Awas Jar
    
    .. note:: Enable the ``Use sbt shell for build and import`` option
 
-3. Building the Sireum Awas JAR
+.. _Slang: https://github.com/sireum/slang 
+
+3. Sireum Awas is built using Scala and Slang_ with Java
+   facades. Howevere, the Awas visulaizer is based on HTML5 and
+   Javascript. This possible because of the ScalaJs, a Scala to
+   Javascript cross compiler.
+
+   - Any changes to Awas source code has to be cross compiled by
+     executing the following command in the Sbt Shell
+
+     .. code:: bash
+
+	       ;project awas-js;fullOptJS
+
+4. Building the Sireum Awas Jar
    
    - Without Scala:
      
@@ -200,6 +214,8 @@ Building Sireum Awas Jar
    .. code:: bash
 
 	     ./awas/buildSireumJar.sh
+
+ 
 
 .. _Building Sireum Awas Plugin:
 
