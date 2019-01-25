@@ -268,18 +268,19 @@ the components to convert the map into waypoints.
 Awas Visualizer Interface
 =========================
 
-Awas visulaizer is a single page web appication. At the top of the
-page there are five buttons. The first one form the right is the
-``Settings`` button to control the amont of information displayed in
-the Awas graph. The next button is the ``Awas Query`` button. This can
+Awas visualizer is a single page web application. At the top of the
+page, there are five buttons. The first one form the right is the
+``Settings`` button to control the amount of information displayed in
+the Awas graph. The next button is the ``Awas Query`` button used to
 open the query interpreter and the results table view. The next three
-buttons are used in the dependency analysis.
+buttons are dependency analysis buttons discussed in the subsequent
+sections.
 
 Below the top bar is the Awas graph viewer. Each system in the AADL
-becomes an Awas Graph. The user can view multiple system at the same
-time by reorganizing the graph viewer window. The top left of the
-graph viewer informs the system name and the hierarchy from the top
-level system.
+becomes an Awas Graph, and Awas allows the user to view multiple
+systems at the same time by reorganizing the graph viewer window. The
+top left of the graph viewer informs the system name and the hierarchy
+from the top level system.
   
 View Options
 ============
@@ -294,59 +295,61 @@ the user can open the view options panel.
    :alt: Awas View Settings
 
 .. warning::
-   The `view binding edges` option in the view option panel,
-   modifies the underlying graph data structure. On large graphs this
-   toggle make take a few seconds to complete. Also, do not perform
+   The `view binding edges` option in the view options panel
+   modifies the underlying graph data structure. On large graphs, this
+   toggle may take a few seconds to complete. Also, do not perform
    path queries in the presence of a large number of binding
-   edges. This can cause drastic decline in query evaluation performance 
+   edges. Doing so may take a long time to evaluate a path query.
 
 Flows
 -----
 
-Flows are the dependencies between a componen's input and output
-ports. In Awas the user can choose to view these flows or hide them.
+Flows are the dependencies between a component's input and output
+ports. In Awas, the user can choose to view these flows or hide them.
 
 .. image:: component_noflow.png
    :align: center
    :width: 50%
    :alt: Component without flow
 
-By selecting the check box in the settings view, one can view the flow
+By selecting the checkbox in the settings view, one can view the flow
 information in components.
 
-In AADL there are three kinds of flows
+In AADL there are three kinds of flows.
 
-* Flow source - Information orginates within a component and flows out
+* Flow source - Information originates within a component and flows out
   through its output port
 
 * Flow sink - Information flows into a component but does not flows
-  out rather it is consumed within the component
+  out instead the component consumes the information
   
 .. image:: component_flow_2.png
    :align: center	   
    :width: 50%
    :alt: Source and Sink flows
 
-* Flow path - Infomration flows into the component may be just
-  propagated out or transoformed and propagated through the component
+* Flow path - Information flows into the component may be just
+  propagated out or transformed and propagated through the component
 
 .. image:: component_flow.png
    :align: center	   
    :width: 50%
    :alt: Flow path
 
-By clicking on a flow Awas can reveal the relationships between a flow
+By clicking on a flow, Awas can reveal the relationships between flow
 and the ports of a component.
 
 Connections
 -----------
 
-In AADL, a user can add behaviors to a connection and these behaviors
-are not captured in the AADL instance diagram. However, Awas provides
-an option to view or hide this information. Similarly, connections in
-AADL can be realized by a component responsible for the transfer of
-information such as a networking bus. Again, Awas provides an option
-to view or hide these bindings relation.
+In AADL, a user can add flow relations to a connection indicating the
+information that influences the communication substrate. The AADL
+instance diagram fails to capture these flows. In Awas, users have an
+option to view or hide this information. Similarly, connections and
+the underlying communication substrate exchange information through
+the bindings relations that is missing in AADL instance
+diagram. Again, Awas provides an option to view or hide these bindings
+relation.
 
 
 .. image:: system_bindings.png
@@ -359,30 +362,30 @@ to view or hide these bindings relation.
 Dependency Analysis
 *******************
 
-In model-based design, typically designing phase is preceded by
-requirements gathering phase. During the designing phase, a system
-designer develops models satisfying these requirements. At a high
-level these requirements are simply connectivity among components. In
-order to check for the satisfactory of the requirements by the model
-the analyst can utilize Awas to project the component dependencies.
+In model-based design, the primary functionality of a designer is to
+translate the system requirements into models. At a high level, these
+requirements are merely connectivity among components. To check for
+the satisfactory of the requirements by the model the analyst can
+utilize Awas to project the component dependencies.
 
 Forward and Backward Analysis
 =============================
 
-Awas can do two kinds of basic dependency analysis. The analyst can
-use them to answer specific questions such as the following:
+Awas can do two kinds of fundamental dependency analysis based on the
+direction of traversal. The analyst can use them to answer specific
+questions such as the following:
 
 .. _Query 1: 
 
 Query 1
-   If ground station sends the map, Where does information regarding the map flow? and where is it getting consumed?
+   If the ground station sends the map, Where does information regarding the map flow? Also, where is it getting consumed?
 
-   To find the solution the analyst can use awas by selecting the port
+   To find the solution the analyst can use Awas by selecting the port
    ``send_map`` in the component ground station and clicking the
-   ``Forward`` button on the top of the screen. This highlights the
-   all the ports that receives the information from ``send_map``. The
-   flow that is highlighted with a darker shade indicates consumption
-   of this information. If the user wants to go down the hierarchy
+   ``Forward`` button on the top of the screen. This action highlights
+   all the ports that receive the information from ``send_map``. The
+   flow highlighted with a darker shade indicates the consumption
+   of this information. If the user wants to go down the hierarchy,
    they can double click on the ``UAV`` component to see the influence
    of ``send_map`` in the subsystems.
 
@@ -400,7 +403,7 @@ Query 2
    The user can select the port ``recv_status`` and click on the
    ``Backward`` button on the top right of the screen. This action
    highlights all the ports through which the information needed by
-   ``recv_status`` flows. Also highlights the flows that sources the
+   ``recv_status`` flows. Also highlights the flows that source the
    information in a darker shade.
 
 .. image:: backward_click.png
@@ -412,9 +415,9 @@ Query 2
 Dependency Analysis Using Queries
 =================================
 
-Although, the select and click on ``Forward`` or ``Backward`` button
-action is simple and quick, it is not easily reproducible by an
-automated regression testing suit. To remedy this, we provide a simple
+Although the select and click on ``Forward`` or ``Backward`` button
+action is quick and straightforward, it is not easily reproducible by an
+automated regression testing suite. To remedy this, we provide a simple
 query language an interpreter inside the Awas visualizer. To open the
 query interpreter, click on the ``Awas Query`` button on the top right
 corner.
@@ -424,7 +427,7 @@ corner.
    :width: 50%
    :alt: Query View
 
-You can see this tab contains two other tabs
+You can see in the above figure the query view tab contains two other tabs.
 
 1. Table
 
@@ -437,7 +440,7 @@ You can see this tab contains two other tabs
 
    The CLI provides a terminal for entering the queries. This window
    also serves a place to inform any syntax errors on the queries. If
-   there exist a solution, this terminal displays the list of graphs
+   there exists a solution, this terminal displays the list of graphs
    containing the solution. On successful execution of a query, Awas
    creates a table entry and stores the result to view it again at a
    later time.
@@ -487,18 +490,19 @@ You can see this tab contains two other tabs
       
    2. Reach Expression:
 
-      All reach expressions start with the term
-      ``reach``. The term ``forward`` indicates the direction of
-      reachability in this `forward reach query`_. The rest is the
-      canonical representation of the port ``send_map``. 
+      All reach expressions start with the term ``reach,`` and the
+      term after the ``reach`` indicates the direction of
+      reachability. In the above Awas query, the direction of the
+      analysis is forward and the term ``forward``. The rest is the
+      canonical representation of the port send_map.
    
 Multiple Query Results
 ----------------------
 
 The last button to discuss at the top right corner is the ``Clear``
 button. This button's purpose is to clear the highlights on the
-graph. However, without clearing the results, we can display results
-of multiple queries at the same time. 
+graph. However, without clearing the results, we can display the
+results of multiple queries at the same time.
 
 .. image:: query_backward.png
    :align: center	   
@@ -532,17 +536,17 @@ Complex Queries
 ===============
 
 The query language's capability goes beyond the simple queries. Using
-the queries the analyst can pose some of the interesting questions such as
+the queries, the analyst can pose some of the exciting questions such as
 
 .. _Query 3: 
 
 Query 3
    when the ground station is sending the map, how does it get to the flight controller?
 
-   The important distinction between `Query 3`_ and the previous
+   The striking distinction between `Query 3`_ and the previous
    queries is the number of arguments in the query. In this query, the
-   analyst ask is it possible to reach flight controller from ground
-   station, if so show how is it possible? in the previous queries we
+   analyst ask is it possible to reach the flight controller from the ground
+   station, if so show how it is possible? In the previous queries we
    asked, how is the information flowing into or out of a specific
    node, port or error token. Here we are asking if we start from a
    source is it possible to reach a destination of interest.
@@ -578,21 +582,21 @@ The following Awas query statement captures the analyst's `Query 3`_
 
 This is again a reach expression. However, the direction of the
 reachability is replaced by the term ``from`` followed by the
-canonical representation of the source of the information and the term
+canonical representation of the source of information and the term
 ``to`` followed by the destination point of the information flow.
 
-The source and sink can be any two node, port, or error token. If
-the source and sink are transitively reachable then Awas will
-highlight results or it will inform the lack of information flow.
+The source and sink can be any two nodes, ports, or error tokens. If
+the source and sink are transitively reachable, then Awas
+highlights results, or Awas informs the lack of information flow.
 	 
 
 Path Queries
 ------------
 
-Although we are able to capture the information flow between a source
+Although can capture the information flow between a source
 and destination, there are multiple ways information can flow from
-source to destination. If one wish to enumerate all the individual
-paths, they can alter the above Awas query as follows
+source to destination. If one wishes to enumerate all the individual
+paths, they can alter the above Awas query as follows.
 
 .. raw:: html
 
@@ -613,13 +617,13 @@ paths, they can alter the above Awas query as follows
    </script> 
 
 The addition of the term ``paths`` instructs Awas to enumerate all the
-paths. This suddenly convert the simple reachability problem into a
-exponentially complex problem. As there can be infinite number of
+paths. This action suddenly converts the simple reachability problem into an
+exponentially complex problem as there can be an infinite number of
 paths if there is a cycle in the graph. Our solution to this problem
 is to enumerate all the paths without cycles and paths will all the
-relevant cycles. Let me explain it a bit, suppose there exist a simple
-path A i.e. path without any cycle. Furthermore, assume there are
-cycles in the graph and the nodes of the cycles overlap with the nodes
+relevant cycles. Suppose there exist a simple
+path A, i.e. path without any cycle. Furthermore, assume there are
+cycles in the graph, and the nodes of the cycles overlap with the nodes
 of the path A. Then we create a complex path with all the nodes of the
 path A and the cycles whose nodes overlap with path A.
 
@@ -630,7 +634,7 @@ path A and the cycles whose nodes overlap with path A.
 
 In the query view, you can see a little arrow in front of the query
 name which indicates the existence of more than one path. On clicking
-the arrow, one can view the list of paths. If one wish to obtain only
+the arrow, one can view the list of paths. If one wishes to obtain only
 the paths without any cycle, then they can use the keyword ``simple``.
 
 
@@ -656,8 +660,8 @@ the paths without any cycle, then they can use the keyword ``simple``.
 The result of the above query list three paths. Yet, we know there is
 only one path from the ground station ``send_map`` to the flight
 controller ``waypoint``. This doesn't mean Awas is incorrect. Awas is
-producing all the paths which includes the abstract paths that flow
-using a components internal flow. To obtain only the refined paths,
+producing all the paths which include the abstract paths that flow
+using components internal flow. To obtain only the refined paths,
 one can use the term ``refined`` in the query.
 
 
@@ -692,9 +696,9 @@ one can use the term ``refined`` in the query.
 Path Based Filter
 -----------------
 
-What if only some of the paths listed interests the analyst? Or,
-analyst wish to see only the paths flowing through a component of
-interest. In these situations the filtering capability of Awas come in
+What if only some of the paths listed interests the analyst? Alternatively, 
+analyst wishes to see only the paths flowing through a component of
+interest. In these situations, the filtering capability of Awas come in
 handy.
 
 .. _Query 4: 
@@ -705,12 +709,14 @@ Query 4
    The filter component in the ``PROC_SW`` subsystem filters out the
    maps that are not well-formed. An Analyst can check this by asking
    is there a path from ground station to flight controller without
-   going through filter. If there are no paths found then we can come
-   to a conclusion that all the paths flow through filter. If a path
-   exists that does not flow through the filter, Awas will display it.
+   going through the filter component. If there are no paths found,
+   then we can conclude that all the paths flow through the filter
+   component. If a path exists that does not flow through the filter,
+   Awas projects it as and informs the list of Awas graph containing
+   the result.
 
 
-The following query can Awas query can answer `Query 4`_.
+The following Awas query can answer `Query 4`_.
 
 .. raw:: html
 
@@ -733,7 +739,8 @@ The following query can Awas query can answer `Query 4`_.
    Clipboard(document.getElementById('copyMacDevelopment'));
    </script>       
 
-On clicking the query name from the query view table, you should see ``The result is empty`` message on the bottom right of the screen.
+On clicking the query name from the query view table, you should see
+``The result is empty`` message on the bottom right of the screen.
 
 .. image:: query_refined_path_none.png
    :align: center
@@ -742,10 +749,10 @@ On clicking the query name from the query view table, you should see ``The resul
 
 On the above query there are a couple of new terms:
 
-1. ``none``: This term filters the paths that does not contain the node, port, or error token specified. Similarly there are two more terms:
+1. ``none``: This term filters the paths that do not contain the node, port, or error token specified. Similarly, there are two more terms:
    
    * ``all``: This term filters the paths containing all of the node, port, or error token specified
-   * ``some``: This term filters the paths containing at lease one of the specified node, port, or error token
+   * ``some``: This term filters the paths containing at least one of the specified node, port, or error token
 
 2. ``:port``: This term pulls out all the ports from a component. Similarly one can specify the following self descriptive terms
    
@@ -766,15 +773,14 @@ can compute the flow of errors in the system and may pose the
 following questions:
 
 Query 5
-   Is there a possibility of hazardous situation arising over the course of the system operation?
+   Is there a possibility of a hazardous situation arising throughout the system operation?
 
 QUery 6
-   What are the root causes for a specific hazardous situation?
+   What are the root causes of a specific hazardous situation?
 
 In our UAV system, we do not have any defined safety constraints
-yet. However, we to have some of the security related
-properties. Using Awas, the analyst can check some simple behavior
-properties. In the UAV system, one of the security property is that,
+yet. However, we do have some of the security-related
+properties. In the UAV system, one of the security property is that
 only the authorized party can communicate with the UAV. We can abuse
 the AADL EMV2 mechanism to model these simple properties and use Awas
 on top of it.
@@ -805,10 +811,10 @@ Query 7
       </script>   
 
       
-To view the results, first we have to enable the ``view errors`` check
-box in the view settings. On clicking on the query name form the query
-view, we can notice only the ``wellformed_authenticated`` token is
-highlighted. This shows neither ``unauthenticated`` nor
+To view the results, first, we have to enable the ``view errors``
+checkbox in the view settings. On clicking on the query name form the
+query view, we can notice only the ``wellformed_authenticated`` token
+is highlighted. This shows neither ``unauthenticated`` nor
 ``not_wellformed`` reaches the flight controller.
    
 .. image:: query_error_tokens.png
@@ -819,13 +825,14 @@ highlighted. This shows neither ``unauthenticated`` nor
 Roadmap
 *******
 
-* Currently the graph rendering and the graph cycles are computed
+* Currently, the graph rendering and the graph cycles are computed
   during the page load time and when enabling or disabling the ``View
-  binding edges``. Therefore, for a large model this may take a while
+  binding edges``. Therefore, for a large model, this may take a while
 
   - Solution:
-    1. Use web workers to parallelly render in the browser
-    2. launch a local server when the awas visualizer is opened and process in the server
+    
+    1. Use web workers to render in the browser parallelly
+    2. Launch a local server from the OSATE plugin, upon opening the Awas visualizer, process the graphs in the server
 
   .. Warning::
      Do not perform path queries when the ``View binding
@@ -837,8 +844,7 @@ Roadmap
   - Solution:
     
     1. Currently the query language supports regular
-       expression. However, the underlying algorithm is not supported.
-       
+       expression. However, the underlying algorithm is not supported       
 
 * AADL EMV2 supports state transformation and error behavior
   propagation.
