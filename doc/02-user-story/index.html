@@ -146,25 +146,25 @@ Sireum Awas Documentation
 <div class="section" id="sireum-awas-capabilities">
 <h2>2.1. Sireum Awas Capabilities<a class="headerlink" href="#sireum-awas-capabilities" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Model Explorer: Enables the user to explore a system’s model without
-installing modeling tools. Provides the freedom of referring the
+<li>Model Explorer: <b>An HTML5 based application that</b> enables the user to explore a system’s model without
+needing to install OSATE. This provides the freedom of referring to the
 model from both handheld devices and desktops. The user can hide
-irrelevant part of the model and focus on a specific level of
+irrelevant parts of the model and focus on a specific level of
 modeling detail</li>
 </ul>
 <hr class="docutils" />
 <ul class="simple">
 <li>Dependency Analysis: A system is a composition of components and
 Awas provides insight into the interaction of components using
-component dependency</li>
+component dependency <b>unclear?</b></li>
 </ul>
 <hr class="docutils" />
 <ul class="simple">
-<li>Risk Analysis: The user can encode abstract error behavior of a
+<li>Risk Analysis: The user can encode the abstract error behavior of a
 component as an error token. Using Awas, a user can produce a
 witness showcasing the existence or lack of errors in the
-system. This token propagation mechanism can be generalized to
-capture infomration flow behaviors of the system</li>
+system. This token propagation mechanism <b>explain</b> can be generalized to
+capture information flow behaviors of the system</li>
 </ul>
 </div>
 <div class="section" id="simple-uav-system">
@@ -174,20 +174,21 @@ a simple example architecture of a UAV surveillance system. The
 primary function of this UAV is to conduct surveillance over a
 specified region. This UAV receives the region information from a
 ground station, and in turn, the UAV sends back status information.</p>
-<p>This UAV consists of a computer and a flight controller. The purpose
+<p>This UAV consists of a mission computer and a flight controller. The purpose
 of the computer is to compute a set of waypoints from a map and a
 flight pattern provided by the ground station. The flight controller
-acts upon these waypoints to progress on the surveillance
-task. Whenever the UAV reaches a waypoint, it sends out status
-information back to the ground station.</p>
+acts upon these waypoints to make progress on the surveillance
+task. <strike>Whenever the UAV reaches a waypoint, it sends out status
+        information back to the ground station.</strike><b>The UAV sends its status information
+        back to the ground station whenever it reaches a waypoint.</b></p>
 <a class="reference internal image-reference" href="../../_images/uas.png"><img alt="High-level UAV Sysytem" class="align-center" src="../../_images/uas.png" style="width: 70%;" /></a>
 </div>
 <div class="section" id="model-exploration">
 <h2>2.3. Model Exploration<a class="headerlink" href="#model-exploration" title="Permalink to this headline">¶</a></h2>
 <p>OSATE can produce a system implementation diagram from a system
 implementation. The following provides a side by side comparison
-between AADL instance diagram and Awas graph for the four systems of
-the UAV model.</p>
+between the AADL instance diagram and the Awas graph for the four systems contained in
+the UAV model. <b>don't have ports/edges selected</b></p>
 <div class="section" id="uas-the-top-level-system-with-ground-station-and-uav">
 <span id="uas-system"></span><h3>2.3.1. UAS: The top level system with ground station and UAV<a class="headerlink" href="#uas-the-top-level-system-with-ground-station-and-uav" title="Permalink to this headline">¶</a></h3>
 <style>
@@ -218,22 +219,21 @@ display: table;
 </div>
 </div><p>You can see that both the AADL diagram and the Awas graph consists of
 three components namely GND, UAV, and RFB. However, the similarities
-end here, Awas explicitly segregates input and output ports. For
-in-out ports, Awas creates two ports one for input and the other for
+end there.  Awas explicitly segregates input and output ports. For
+in-out ports, Awas creates two ports, one for input and the other for
 output. Thus you can see there are two RFA ports in GND component in
 the Awas side and only one in the AADL side. Awas also separates the
-bidirectional connections into two separate connections.</p>
+bidirectional connections into two separate connections. <b> </b></p>
 <p>Awas provides the following capabilities over OSATE:</p>
 <ol class="arabic">
 <li><p class="first">In Awas, the diagrams are interactive</p>
 </li>
-<li><p class="first">Users can click on a node(component and connection), port, or an edge to highlight it</p>
+<li><p class="first">Users can click on a node (component and connection), port, or an edge (AADL connection) to highlight it</p>
 </li>
-<li><p class="first">On clicking an edge which represents an AADL connection, Awas
-highlights the edge and also the ports involved in the
-connection. Although, AADL diagrams look cleaner, in a complex
-system edges overlap a lot and it quickly becomes tedious to trace
-each edge.</p>
+<li><p class="first">Awas will highlight an edge when it's clicked along with the ports involved in the
+connection. Although AADL diagrams can have cleaner layouts, the edges involved in complex
+systems tend to overlap in AADL diagrams which can make it tedious to trace an
+individual edge.</p>
 </li>
 <li><div class="first">This icon <img src="../../_static/sub-graph-icon.png" alt="Sub-graph" style="width:1%"> in front of a component name
 indicates that this node contains a sub-system. By double-clicking on this node, you can open the sub-system's graph</div></li>
@@ -270,7 +270,7 @@ display: table;
 </div><p>In a sub-system graph, Awas creates the parent component’s ports as
 nodes. The node <code class="docutils literal notranslate"><span class="pre">recv_map</span></code> is same as the port in the UAV component
 from the <a class="reference internal" href="#uas-system">UAS system</a>. Therefore, all interaction on this node is
-mimicked on to the port in the parent component.</p>
+mimicked on to the port in the parent component. <b> sentence unclear, what do you mean by mimicked?</b></p>
 </div>
 <div class="section" id="mission-computer-composed-of-radio-uart-and-software-components">
 <h3>2.3.3. Mission computer - Composed of Radio, UART and Software Components<a class="headerlink" href="#mission-computer-composed-of-radio-uart-and-software-components" title="Permalink to this headline">¶</a></h3>
@@ -300,12 +300,12 @@ display: table;
 <div class="column">
 <img src="../../_static/awas_mc.png" alt="Awas" style="width:1000%">
 </div>
-</div><p>You can see that in Awas graph, there are lot more edges when compared
-to the AADL diagram. The additional edges are the edges capturing the
-binding relationship. For example, the component <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code> has two
-ports <code class="docutils literal notranslate"><span class="pre">processor_IN</span></code> and <code class="docutils literal notranslate"><span class="pre">processor_OUT</span></code> connecting the component
-<code class="docutils literal notranslate"><span class="pre">PROC_HW</span></code>. These edges capture the relation that the <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code>
-representing the software of the system executes on the hardware
+</div><p>Awas graphs typically contain more edges compared to AADL diagrams.  The additional edges capture the
+binding relationships between ?components?. For example, <b>diagrams too small to read clearly.  would be nice if I could click on them to view a larger version</b>
+    the component <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code> has two
+ports, <code class="docutils literal notranslate"><span class="pre">processor_IN</span></code> and <code class="docutils literal notranslate"><span class="pre">processor_OUT</span></code>, which are connected to the
+<code class="docutils literal notranslate"><span class="pre">PROC_HW</span></code> component. These edges capture the relation that the software component <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code>
+executes on the hardware component
 <code class="docutils literal notranslate"><span class="pre">PROC_HW</span></code>. However, AADL diagrams fail to capture these binding
 relations and the non-trivial information flow through them.</p>
 </div>
@@ -337,32 +337,27 @@ display: table;
 <div class="column">
 <img src="../../_static/awas_sw.png" alt="Awas" style="width:1000%">
 </div>
-</div><p>The Software system consists of drivers for the radio device for
-communicating with the ground station and the UART for communicating
-with the flight controller. Apart from the drivers, the software
-system consists of a filter to check the wellformedness of the map and
+</div><p>The Software system consists of the device drivers RADIO and UART that communicate with the ground station and flight controller respectively. Apart from the drivers, the software
+system consists of a filter FLT that checks the well-formedness of a map and
 the components to convert the map into waypoints.</p>
 </div>
 <div class="section" id="awas-visualizer-interface">
 <h3>2.3.5. Awas Visualizer Interface<a class="headerlink" href="#awas-visualizer-interface" title="Permalink to this headline">¶</a></h3>
-<p>Awas visualizer is a single page web application. At the top of the
-page, there are five buttons. The first one form the right is the
+<p>Awas visualizer is an HTML5 based web application. At the top of the
+page, there are five buttons. The first one from the right is the
 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> button to control the amount of information displayed in
 the Awas graph. The next button is the <code class="docutils literal notranslate"><span class="pre">Awas</span> <span class="pre">Query</span></code> button used to
 open the query interpreter and the results table view. The next three
-buttons are dependency analysis buttons discussed in the subsequent
+buttons are dependency analysis buttons discussed in subsequent
 sections.</p>
-<p>Below the top bar is the Awas graph viewer. Each system in the AADL
+<p>Below the top bar is the Awas graph viewer. Each system in the AADL model
 becomes an Awas Graph, and Awas allows the user to view multiple
 systems at the same time by reorganizing the graph viewer window. The
-top left of the graph viewer informs the system name and the hierarchy
-from the top level system.</p>
+top left of the graph viewer contains a breadcrumb trail that displays the hierarchy of the current component in relation to the system's structure.</p>
 </div>
 <div class="section" id="view-options">
 <h3>2.3.6. View Options<a class="headerlink" href="#view-options" title="Permalink to this headline">¶</a></h3>
-<p>Using Awas a user can decide what are all the information in a
-component to view and what to hide. By clicking the <cite>Settings</cite> button,
-the user can open the view options panel.</p>
+<p>The View Option panel provides the ability to choose what information will be present in the Awas graph.</p>
 <img alt="Awas View Settings" class="align-center" src="../../_images/view_settings.png" />
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -375,24 +370,23 @@ edges. Doing so may take a long time to evaluate a path query.</p>
 <div class="section" id="flows">
 <h4>2.3.6.1. Flows<a class="headerlink" href="#flows" title="Permalink to this headline">¶</a></h4>
 <p>Flows are the dependencies between a component’s input and output
-ports. In Awas, the user can choose to view these flows or hide them.</p>
+    ports. <strike>In Awas, the user can choose to view these flows or hide them.</strike> <b> get rid of initial uav image and replace with the uav from below</b></p>
 <a class="reference internal image-reference" href="../../_images/component_noflow.png"><img alt="Component without flow" class="align-center" src="../../_images/component_noflow.png" style="width: 50%;" /></a>
 <p>By selecting the checkbox in the settings view, one can view the flow
 information in components.</p>
-<p>In AADL there are three kinds of flows.</p>
+<p>In AADL there are three kinds of flows. <b> relate these to the image, ie *-> is source</b></p>
 <ul class="simple">
 <li>Flow source - Information originates within a component and flows out
 through its output port</li>
-<li>Flow sink - Information flows into a component but does not flows
-out instead the component consumes the information</li>
+<li>Flow sink - Information flows into a component but does not flow
+out, instead the component consumes the information</li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/component_flow_2.png"><img alt="Source and Sink flows" class="align-center" src="../../_images/component_flow_2.png" style="width: 50%;" /></a>
 <ul class="simple">
-<li>Flow path - Information flows into the component may be just
-propagated out or transformed and propagated through the component</li>
+<li>Flow path - Information flows into the component and is optionally transformed before being propagated out of the component <b>relate to -> symbol</b></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/component_flow.png"><img alt="Flow path" class="align-center" src="../../_images/component_flow.png" style="width: 50%;" /></a>
-<p>By clicking on a flow, Awas can reveal the relationships between flow
+<p>By clicking on a flow, Awas can reveal the relationships between the flow
 and the ports of a component.</p>
 </div>
 <div class="section" id="connections">
@@ -403,8 +397,8 @@ instance diagram fails to capture these flows. In Awas, users have an
 option to view or hide this information. Similarly, connections and
 the underlying communication substrate exchange information through
 the bindings relations that is missing in AADL instance
-diagram. Again, Awas provides an option to view or hide these bindings
-relation.</p>
+diagrams. Again, Awas provides an option to view or hide these binding
+relations.</p>
 <a class="reference internal image-reference" href="../../_images/system_bindings.png"><img alt="Flow path" class="align-center" src="../../_images/system_bindings.png" style="width: 100%;" /></a>
 </div>
 </div>
@@ -413,8 +407,8 @@ relation.</p>
 <h2>2.4. Dependency Analysis<a class="headerlink" href="#dependency-analysis" title="Permalink to this headline">¶</a></h2>
 <p>In model-based design, the primary functionality of a designer is to
 translate the system requirements into models. At a high level, these
-requirements are merely connectivity among components. To check for
-the satisfactory of the requirements by the model the analyst can
+requirements are <i>?realized as connections between components?</i> merely connectivity among components. To check for
+the satisfactory <i>?coverage?</i> of the requirements by the model the analyst can
 utilize Awas to project the component dependencies.</p>
 <div class="section" id="forward-and-backward-analysis">
 <h3>2.4.1. Forward and Backward Analysis<a class="headerlink" href="#forward-and-backward-analysis" title="Permalink to this headline">¶</a></h3>
@@ -423,8 +417,8 @@ direction of traversal. The analyst can use them to answer specific
 questions such as the following:</p>
 <dl class="docutils" id="query-1">
 <dt>Query 1</dt>
-<dd><p class="first">If the ground station sends the map, Where does information regarding the map flow? Also, where is it getting consumed?</p>
-<p class="last">To find the solution the analyst can use Awas by selecting the port
+<dd><p class="first">If the ground station sends the map, where does information regarding the map flow? Also, where is it getting consumed?</p>
+<p class="last">The answer can be obtained by selecting the port
 <code class="docutils literal notranslate"><span class="pre">send_map</span></code> in the component ground station and clicking the
 <code class="docutils literal notranslate"><span class="pre">Forward</span></code> button on the top of the screen. This action highlights
 all the ports that receive the information from <code class="docutils literal notranslate"><span class="pre">send_map</span></code>. The
@@ -441,7 +435,7 @@ of <code class="docutils literal notranslate"><span class="pre">send_map</span><
 <p class="last">The user can select the port <code class="docutils literal notranslate"><span class="pre">recv_status</span></code> and click on the
 <code class="docutils literal notranslate"><span class="pre">Backward</span></code> button on the top right of the screen. This action
 highlights all the ports through which the information needed by
-<code class="docutils literal notranslate"><span class="pre">recv_status</span></code> flows. Also highlights the flows that source the
+<code class="docutils literal notranslate"><span class="pre">recv_status</span></code> flows. It also highlights the flows that source the
 information in a darker shade.</p>
 </dd>
 </dl>
@@ -449,33 +443,30 @@ information in a darker shade.</p>
 </div>
 <div class="section" id="dependency-analysis-using-queries">
 <h3>2.4.2. Dependency Analysis Using Queries<a class="headerlink" href="#dependency-analysis-using-queries" title="Permalink to this headline">¶</a></h3>
-<p>Although the select and click on <code class="docutils literal notranslate"><span class="pre">Forward</span></code> or <code class="docutils literal notranslate"><span class="pre">Backward</span></code> button
-action is quick and straightforward, it is not easily reproducible by an
-automated regression testing suite. To remedy this, we provide a simple
-query language an interpreter inside the Awas visualizer. To open the
-query interpreter, click on the <code class="docutils literal notranslate"><span class="pre">Awas</span> <span class="pre">Query</span></code> button on the top right
+<p>While performing backward and forward analysis is quick and straightforward using the buttons, it is not easily reproducible by an
+automated regression testing suite. To remedy this we provide a simple
+query language and interpreter inside the Awas visualizer. To open the
+query interpreter, click the <code class="docutils literal notranslate"><span class="pre">Awas</span> <span class="pre">Query</span></code> button in the top right
 corner.</p>
 <a class="reference internal image-reference" href="../../_images/query_view.png"><img alt="Query View" class="align-center" src="../../_images/query_view.png" style="width: 50%;" /></a>
-<p>You can see in the above figure the query view tab contains two other tabs.</p>
+<p>The query view tab contains two additional tabs:</p>
 <ol class="arabic">
 <li><p class="first">Table</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Table</span></code> tab lists the previously executed queries. The color
 in front of each query name indicates the result highlight
-color. The query names are clickable buttons, upon clicking
-highlights the results on the graph.</p>
+color. Clicking a query name will highlight the query result in the graph.</p>
 </li>
 <li><p class="first">CLI</p>
-<p>The CLI provides a terminal for entering the queries. This window
-also serves a place to inform any syntax errors on the queries. If
+<p>The CLI provides a terminal for entering the queries. <strike>This window
+    also serves as a place to inform any syntax errors on the queries.</strike> If
 there exists a solution, this terminal displays the list of graphs
-containing the solution. On successful execution of a query, Awas
-creates a table entry and stores the result to view it again at a
-later time.</p>
+    containing the solution <b>solution to a syntax error or a query</b>. On successful execution of a query, Awas
+creates a table entry <b>where, in the Table tab?</b> and stores the result.</p>
 <a class="reference internal image-reference" href="../../_images/query_forward.png"><img alt="query forward" class="align-center" src="../../_images/query_forward.png" style="width: 100%;" /></a>
-<p>The query <code class="docutils literal notranslate"><span class="pre">forward_GND_send_map</span></code> performs the same operation of
-the <a class="reference internal" href="#query-1">Query 1</a>. However, using the query rather than the button
+<p>The query <code class="docutils literal notranslate"><span class="pre">forward_GND_send_map</span></code> performs the same operation as
+<a class="reference internal" href="#query-1">Query 1</a>. <strike>However, using the query rather than the button
 click allows the user to save and execute the same during
-regression testing.</p>
+        regression testing.</strike></p>
 <table width="100%" > <tr> <td><div class="code bash highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">forward_GND_send_map</span> <span class="o">=</span> <span class="kr">reach forward </span><span class="nc">UAS_Impl_Instance.GND.send_map</span>
 </pre></div>
 </div>
@@ -490,15 +481,13 @@ query and everything else is the query expression.</p>
 <ol class="arabic">
 <li><p class="first">Primary Query Expression:</p>
 <p>This can be a canonical representation
-of a node, port, or an error token or a previously executed
+of a node, port, error token, or a previously executed
 query name.</p>
 </li>
 <li><p class="first">Reach Expression:</p>
-<p>All reach expressions start with the term <code class="docutils literal notranslate"><span class="pre">reach,</span></code> and the
-term after the <code class="docutils literal notranslate"><span class="pre">reach</span></code> indicates the direction of
-reachability. In the above Awas query, the direction of the
-analysis is forward and the term <code class="docutils literal notranslate"><span class="pre">forward</span></code>. The rest is the
-canonical representation of the port send_map.</p>
+<p>All reach expressions start with the term <code class="docutils literal notranslate"><span class="pre">reach.</span></code> The
+term after <code class="docutils literal notranslate"><span class="pre">reach</span></code> indicates the direction of
+reachability and the rest of the expression identifies the canonical representation of the port.</p>
 </li>
 </ol>
 </li>
@@ -507,12 +496,11 @@ canonical representation of the port send_map.</p>
 <h4>2.4.2.1. Multiple Query Results<a class="headerlink" href="#multiple-query-results" title="Permalink to this headline">¶</a></h4>
 <p>The last button to discuss at the top right corner is the <code class="docutils literal notranslate"><span class="pre">Clear</span></code>
 button. This button’s purpose is to clear the highlights on the
-graph. However, without clearing the results, we can display the
-results of multiple queries at the same time.</p>
+graph. However, it can be useful to view the results of multiple queries at the same time. </p>
 <a class="reference internal image-reference" href="../../_images/query_backward.png"><img alt="Multiple Query Results" class="align-center" src="../../_images/query_backward.png" style="width: 100%;" /></a>
-<p>The query <code class="docutils literal notranslate"><span class="pre">backward_GND_status</span></code> performs the same action as the
-<a class="reference internal" href="#query-2">Query 2</a>. By clicking on the button <code class="docutils literal notranslate"><span class="pre">backward_GND_status</span></code> without
-clearing the result of the previous query we can see the results of
+<p>The query <code class="docutils literal notranslate"><span class="pre">backward_GND_status</span></code> performs the same action as
+    <a class="reference internal" href="#query-2">Query 2</a>. By clicking on the button <code class="docutils literal notranslate"><span class="pre">backward_GND_status</span></code> without
+clearing the results of the previous query we can see the results of
 both the queries.</p>
 <table width="100%" > <tr> <td><div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">backward_GND_status</span> <span class="o">=</span> <span class="kr">reach backward </span><span class="nc">UAS_Impl_Instance.GND.recv_status</span>
 </pre></div>
@@ -527,17 +515,16 @@ Clipboard(document.getElementById('copyMacDevelopment'));
 <div class="section" id="complex-queries">
 <h3>2.4.3. Complex Queries<a class="headerlink" href="#complex-queries" title="Permalink to this headline">¶</a></h3>
 <p>The query language’s capability goes beyond the simple queries. Using
-the queries, the analyst can pose some of the exciting questions such as</p>
+the queries, the analyst can compose much more interesting questions.</p>
 <dl class="docutils" id="query-3">
 <dt>Query 3</dt>
-<dd><p class="first">when the ground station is sending the map, how does it get to the flight controller?</p>
+<dd><p class="first">When the ground station is sending the map, how does it get to the flight controller?</p>
 <p class="last">The striking distinction between <a class="reference internal" href="#query-3">Query 3</a> and the previous
 queries is the number of arguments in the query. In this query, the
-analyst ask is it possible to reach the flight controller from the ground
-station, if so show how it is possible? In the previous queries we
-asked, how is the information flowing into or out of a specific
-node, port or error token. Here we are asking if we start from a
-source is it possible to reach a destination of interest.</p>
+analyst asks if it's possible to reach the flight controller from the ground
+station, and if so to show how it is possible.   In contrast, the previous queries
+only showed how the information flowed into or out of a specific
+node, port or error token. </p>
 </dd>
 </dl>
 <div class="section" id="source-to-destination-query">
@@ -558,11 +545,11 @@ canonical representation of the source of information and the term
 <code class="docutils literal notranslate"><span class="pre">to</span></code> followed by the destination point of the information flow.</p>
 <p>The source and sink can be any two nodes, ports, or error tokens. If
 the source and sink are transitively reachable, then Awas
-highlights results, or Awas informs the lack of information flow.</p>
+highlights the results, otherwise Awas will indicate the flow is infeasible.</p>
 </div>
 <div class="section" id="path-queries">
 <h4>2.4.3.2. Path Queries<a class="headerlink" href="#path-queries" title="Permalink to this headline">¶</a></h4>
-<p>Although can capture the information flow between a source
+<p>Although ?????? can capture the information flow between a source
 and destination, there are multiple ways information can flow from
 source to destination. If one wishes to enumerate all the individual
 paths, they can alter the above Awas query as follows.</p>
@@ -576,20 +563,20 @@ paths, they can alter the above Awas query as follows.</p>
 clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('copyMacDevelopment'));
 </script><p>The addition of the term <code class="docutils literal notranslate"><span class="pre">paths</span></code> instructs Awas to enumerate all the
-paths. This action suddenly converts the simple reachability problem into an
+paths. This action converts the simple reachability problem into an
 exponentially complex problem as there can be an infinite number of
 paths if there is a cycle in the graph. Our solution to this problem
-is to enumerate all the paths without cycles and paths will all the
-relevant cycles. Suppose there exist a simple
+is to enumerate all the paths without cycles and paths will ????? all the
+relevant cycles.  For example, suppose there exists a simple
 path A, i.e. path without any cycle. Furthermore, assume there are
 cycles in the graph, and the nodes of the cycles overlap with the nodes
 of the path A. Then we create a complex path with all the nodes of the
 path A and the cycles whose nodes overlap with path A.</p>
 <a class="reference internal image-reference" href="../../_images/query_result.png"><img alt="Using CLI" class="align-center" src="../../_images/query_result.png" style="width: 50%;" /></a>
 <p>In the query view, you can see a little arrow in front of the query
-name which indicates the existence of more than one path. On clicking
-the arrow, one can view the list of paths. If one wishes to obtain only
-the paths without any cycle, then they can use the keyword <code class="docutils literal notranslate"><span class="pre">simple</span></code>.</p>
+name which indicates the existence of more than one path. Clicking
+the arrow will show the list of paths. If one wishes to view only
+the paths that do not contain cycles, then they can use the keyword <code class="docutils literal notranslate"><span class="pre">simple</span></code>.</p>
 <table width="100%" > <tr> <td><div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_simple_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">simple </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"></span>
 <span class="kr">                                                         to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span>
 </pre></div>
@@ -600,11 +587,11 @@ data-clipboard-text="GS_flight_controller_simple_paths = reach simple paths from
 <img height="20" src="../../_static/clippy.svg" alt="Copy to
 clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('copyMacDevelopment'));
-</script><p>The result of the above query list three paths. Yet, we know there is
+</script><p>The result of the above query yields three paths. Yet, we know there is
 only one path from the ground station <code class="docutils literal notranslate"><span class="pre">send_map</span></code> to the flight
 controller <code class="docutils literal notranslate"><span class="pre">waypoint</span></code>. This doesn’t mean Awas is incorrect. Awas is
 producing all the paths which include the abstract paths that flow
-using components internal flow. To obtain only the refined paths,
+    using components internal flow <b>this sentence was unclear</b>. To obtain only the refined paths,
 one can use the term <code class="docutils literal notranslate"><span class="pre">refined</span></code> in the query.</p>
 <table width="100%" > <tr> <td><div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_refined_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">refined </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"></span>
 <span class="kr">                                                         to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span>
@@ -620,20 +607,20 @@ Clipboard(document.getElementById('copyMacDevelopment'));
 </div>
 <div class="section" id="path-based-filter">
 <h4>2.4.3.3. Path Based Filter<a class="headerlink" href="#path-based-filter" title="Permalink to this headline">¶</a></h4>
-<p>What if only some of the paths listed interests the analyst? Alternatively,
-analyst wishes to see only the paths flowing through a component of
-interest. In these situations, the filtering capability of Awas come in
+<p>What if only some of the paths listed are of interest to the analyst? Alternatively,
+what if the analyst wishes to see only the paths flowing through a component of
+interest. In these situations, the filtering capability of Awas can come in
 handy.</p>
 <dl class="docutils" id="query-4">
 <dt>Query 4</dt>
 <dd><p class="first">When the ground station is sending the map, is it always flowing through the filter component?</p>
 <p class="last">The filter component in the <code class="docutils literal notranslate"><span class="pre">PROC_SW</span></code> subsystem filters out the
-maps that are not well-formed. An Analyst can check this by asking
-is there a path from ground station to flight controller without
-going through the filter component. If there are no paths found,
+maps that are not well-formed. An analyst can check this by asking
+if there is a path from the ground station to the flight controller without
+going through the filter component. If no paths are found
 then we can conclude that all the paths flow through the filter
 component. If a path exists that does not flow through the filter,
-Awas projects it as and informs the list of Awas graph containing
+Awas projects it and ??informs?? the list of Awas graph containing
 the result.</p>
 </dd>
 </dl>
@@ -649,13 +636,13 @@ data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths fr
 <img height="20" src="../../_static/clippy.svg" alt="Copy to
 clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('copyMacDevelopment'));
-</script><p>On clicking the query name from the query view table, you should see
-<code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">empty</span></code> message on the bottom right of the screen.</p>
+</script><p>Clicking on the query name from the query view table will cause a
+<code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">empty</span></code> message to appear at the bottom right of the screen.</p>
 <a class="reference internal image-reference" href="../../_images/query_refined_path_none.png"><img alt="Query path filter" class="align-center" src="../../_images/query_refined_path_none.png" style="width: 100%;" /></a>
-<p>On the above query there are a couple of new terms:</p>
+<p>There are a few new terms contained the the previous query:</p>
 <ol class="arabic simple">
 <li><code class="docutils literal notranslate"><span class="pre">none</span></code>: This term filters the paths that do not contain the node, port, or error token specified. Similarly, there are two more terms:<ul>
-<li><code class="docutils literal notranslate"><span class="pre">all</span></code>: This term filters the paths containing all of the node, port, or error token specified</li>
+<li><code class="docutils literal notranslate"><span class="pre">all</span></code>: This term filters the paths containing all of the nodes, ports, or error tokens specified</li>
 <li><code class="docutils literal notranslate"><span class="pre">some</span></code>: This term filters the paths containing at least one of the specified node, port, or error token</li>
 </ul>
 </li>
@@ -691,9 +678,9 @@ properties. In the UAV system, one of the security property is that
 only the authorized party can communicate with the UAV. We can abuse
 the AADL EMV2 mechanism to model these simple properties and use Awas
 on top of it.</p>
-<dl class="docutils">
+<dl class="docutils">form the
 <dt>Query 7</dt>
-<dd><p class="first">Is only authorized and well-formed map reaches the flight controller?</p>
+<dd><p class="first">Do only authorized and well-formed maps reach the flight controller?</p>
 <p>We can check this using Awas by the following query:</p>
 <table width="100%" > <tr> <td><div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr">:port-error</span><span class="p">)</span><span class="kr"></span>
 <span class="kr">                                           to </span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="kr">:port-error</span><span class="p">)</span>
@@ -708,7 +695,7 @@ Clipboard(document.getElementById('copyMacDevelopment'));
 </script></div></dd>
 </dl>
 <p>To view the results, first, we have to enable the <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">errors</span></code>
-checkbox in the view settings. On clicking on the query name form the
+checkbox in the view settings. On clicking on the query name from the
 query view, we can notice only the <code class="docutils literal notranslate"><span class="pre">wellformed_authenticated</span></code> token
 is highlighted. This shows neither <code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> nor
 <code class="docutils literal notranslate"><span class="pre">not_wellformed</span></code> reaches the flight controller.</p>
@@ -723,7 +710,7 @@ during the page load time and when enabling or disabling the <code class="docuti
 <ul class="simple">
 <li>Solution:<ol class="arabic">
 <li>Use web workers to render in the browser parallelly</li>
-<li>Launch a local server from the OSATE plugin, upon opening the Awas visualizer, process the graphs in the server</li>
+<li>Launch a local server from the OSATE plugin and process the graphs in the server rather than the browser.</li>
 </ol>
 </li>
 </ul>
@@ -738,13 +725,13 @@ binding edges, this may take a while to compute.</p>
 <ul class="simple">
 <li>Solution:<ol class="arabic">
 <li>Currently the query language supports regular
-expression. However, the underlying algorithm is not supported</li>
+expression. However, the underlying algorithm is not supported <b>unclear. Awas can't process the regex?</b></li>
 </ol>
 </li>
 </ul>
 </li>
 <li><p class="first">AADL EMV2 supports state transformation and error behavior
-propagation.</p>
+propagation.<b>unclear what the issue is.</b></p>
 <ul class="simple">
 <li>Solution:<ol class="arabic">
 <li>As a first step, weakest precondition calculus is being
