@@ -129,10 +129,10 @@ and in Google Chrome and Mozilla Firefox browsers.</p>
 <span id="using-osate-plugin"></span><h2>1.1. Sireum Awas pluging for OSATE<a class="headerlink" href="#sireum-awas-pluging-for-osate" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://osate.org/">OSATE</a> is a customized Eclipse IDE for developing AADL models. Awas
 can be installed as a plugin in OSATE.</p>
-<ol class="arabic simple">
-<li>Open OSATE, and navigate to Help &gt; Install New Software …</li>
-<li>Click Add… and in the Location: field paste the following URL</li>
-</ol>
+<ol class="arabic">
+<li><p class="first">Open OSATE, and navigate to Help &gt; Install New Software …</p>
+</li>
+<li><p class="first">Click Add… and in the Location: field paste the following URL</p>
 <table width="100%" > <tr> <td><div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>https://raw.githubusercontent.com/sireum/osate-plugin-update-site/master/
 </pre></div>
 </div>
@@ -142,24 +142,26 @@ data-clipboard-text="https://raw.githubusercontent.com/sireum/osate-plugin-updat
 <img height="20" src="../../_static/clippy.svg" alt="Copy to
 clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('copyMacDevelopment'));
-</script><ol class="arabic simple" start="3">
-<li>Expand the <code class="docutils literal notranslate"><span class="pre">Sireum</span></code> option and select <code class="docutils literal notranslate"><span class="pre">Sireum</span> <span class="pre">Awas</span> <span class="pre">plugin</span></code> to
-install, and then click <code class="docutils literal notranslate"><span class="pre">Next</span></code></li>
-</ol>
+</script></li>
+<li><p class="first">Expand the <code class="docutils literal notranslate"><span class="pre">Sireum</span></code> option and select <code class="docutils literal notranslate"><span class="pre">Sireum</span> <span class="pre">Awas</span> <span class="pre">plugin</span></code> to
+install, and then click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
 <img alt="../../_images/plugin-install-1.png" src="../../_images/plugin-install-1.png" />
-<ol class="arabic simple" start="4">
-<li>Accept the license agreement and click <code class="docutils literal notranslate"><span class="pre">Finish</span></code></li>
+</li>
+<li><p class="first">Accept the license agreement and click <code class="docutils literal notranslate"><span class="pre">Finish</span></code></p>
+</li>
+<li><p class="first">Restart OSATE when prompted</p>
+</li>
+<li><p class="first">Skip to <a class="reference internal" href="#running-awas">Running Awas</a> section to generate an Awas visualizer for your AADL Model</p>
+</li>
 </ol>
-<p>Once installed restart the Osate to use Awas.</p>
 </div>
 <div class="section" id="sireum-awas-jar">
 <span id="using-awas-pre-build-jar"></span><h2>1.2. Sireum Awas JAR<a class="headerlink" href="#sireum-awas-jar" title="Permalink to this headline">¶</a></h2>
 <p>Sireum Awas can be included in your OSATE plugin using the published
-JAR.  To include it in your project using the following <code class="docutils literal notranslate"><span class="pre">Maven</span></code>
-resolver and dependency.</p>
-<ol class="arabic simple">
-<li>Add the JitPack repository to your build file</li>
-</ol>
+JAR. Use the following <code class="docutils literal notranslate"><span class="pre">Maven</span></code> resolver and dependency to include
+Awas in your project.</p>
+<ol class="arabic">
+<li><p class="first">Add the JitPack repository to your build file</p>
 <div class="code xml highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;repositories&gt;
   &lt;repository&gt; &lt;id&gt;jitpack.io&lt;/id&gt;
     &lt;url&gt;https://jitpack.io&lt;/url&gt;
@@ -167,53 +169,34 @@ resolver and dependency.</p>
 &lt;/repositories&gt;
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>Add the dependency</li>
-</ol>
+</li>
+<li><p class="first">Add the dependency</p>
 <div class="code xml highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;dependency&gt; &lt;groupId&gt;com.github.sireum&lt;/groupId&gt;
     &lt;artifactId&gt;v3-awas&lt;/artifactId&gt;
     &lt;version&gt;-SNAPSHOT&lt;/version&gt;
 &lt;/dependency&gt;
 </pre></div>
 </div>
+</li>
+</ol>
 </div>
 <div class="section" id="sireum-awas-source-distribution">
 <span id="using-awas-source"></span><h2>1.3. Sireum Awas source distribution<a class="headerlink" href="#sireum-awas-source-distribution" title="Permalink to this headline">¶</a></h2>
-<p>Awas is part of a broader set of tool platform called
-Sireum. Therefore, the first step in setting up the Awas development
-environmet is to obtaining Sireum IVE for development.</p>
+<p>Awas is part of a high-assurance software development platform called
+Sireum. <a class="reference external" href="https://github.com/sireum/v3">Sireum IVE</a> is used to develop the Awas source code and
+an <a class="reference external" href="http://osate.org/setup-development.html">OSATE development environment</a> is used to develop the Sireum Awas
+OSATE plugin.</p>
 <div class="section" id="prerequisites">
 <h3>1.3.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic">
-<li><p class="first">Install the required tools for building Sireum: bash, git, unzip,
-wget, bc</p>
-</li>
-<li><p class="first">Follow the instructions in the <a class="reference external" href="https://github.com/sireum/v3">Sireum</a> webpage apropriate for your
-platform to install the <code class="docutils literal notranslate"><span class="pre">Sireum</span> <span class="pre">IVE</span> <span class="pre">for</span> <span class="pre">development</span></code></p>
-</li>
-<li><p class="first">Clone the following repositories</p>
-<ul class="simple">
-<li>Using HTTPS:</li>
-</ul>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/sireum/v3.git
-sireum-v3 git clone https://github.com:sireum/air.git
-sireum-v3/aadl/ir
-</pre></div>
-</div>
-<ul class="simple">
-<li>Using SSH:</li>
-</ul>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive git@github.com:sireum/v3.git
-sireum-v3 git clone git@github.com:sireum/air.git
-sireum-v3/aadl/ir
-</pre></div>
-</div>
-</li>
-<li><p class="first">Follow the <a class="reference external" href="http://osate.org/setup-development.html">OSATE development environment</a> webpage for Sireum Awas
-plugin development. Eclipse is the underlying IDE being used in the
-OSATE development so the rest of plugin development instructions
-will refer to the IDE as <code class="docutils literal notranslate"><span class="pre">Eclipse</span></code>.</p>
-</li>
+<ol class="arabic simple">
+<li>Install the required tools for building Sireum: bash, git, unzip,
+wget, bc</li>
+<li>Follow the instructions in the <a class="reference external" href="https://github.com/sireum/v3">Sireum</a> webpage apropriate for your
+platform to install the <code class="docutils literal notranslate"><span class="pre">Sireum</span> <span class="pre">IVE</span> <span class="pre">for</span> <span class="pre">development</span></code></li>
+<li>Follow the <a class="reference external" href="http://osate.org/setup-development.html">OSATE instructions</a> to setup an OSATE development
+environment. Eclipse is the underlying IDE being used by OSATE so
+the rest of plugin development instructions will refer to the IDE
+as <code class="docutils literal notranslate"><span class="pre">Eclipse</span></code></li>
 </ol>
 </div>
 <div class="section" id="installing-and-running-awas">
@@ -226,79 +209,84 @@ will refer to the IDE as <code class="docutils literal notranslate"><span class=
 <div class="section" id="building-sireum-awas-jar">
 <span id="id2"></span><h4>1.3.2.1. Building Sireum Awas Jar<a class="headerlink" href="#building-sireum-awas-jar" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
-<li><p class="first">From the parent directory of <code class="docutils literal notranslate"><span class="pre">sireum-v3</span></code> from the previous
-step, clone the awas repository</p>
+<li><p class="first">Clone the following repositories</p>
 <ul>
 <li><p class="first">Using HTTPS:</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/sireum/v3-awas.git
-sireum-v3/awas
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/sireum/v3.git
+sireum-v3 git clone https://github.com:sireum/air.git sireum-v3/aadl/ir
 </pre></div>
 </div>
 </li>
 <li><p class="first">Using SSH:</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sireum/v3-awas.git
-sireum-v3/awas
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive git@github.com:sireum/v3.git
+sireum-v3 git clone git@github.com:sireum/air.git sireum-v3/aadl/ir
 </pre></div>
 </div>
 </li>
 </ul>
 </li>
-<li><p class="first">Follow the <a class="reference external" href="https://github.com/sireum/v3#setting-up-sireum-ive-for-sireum-v3-development">Setting up Sireum IVE</a> document to setup the devlopment
-environment</p>
+<li><p class="first">From the parent directory of <code class="docutils literal notranslate"><span class="pre">sireum-v3</span></code> from the previous
+step, clone the awas repository</p>
+<ul>
+<li><p class="first">Using HTTPS:</p>
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/sireum/v3-awas.git sireum-v3/awas
+</pre></div>
+</div>
+</li>
+<li><p class="first">Using SSH:</p>
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sireum/v3-awas.git sireum-v3/awas
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Follow the <a class="reference external" href="https://github.com/sireum/v3#setting-up-sireum-ive-for-sireum-v3-development">Setting up Sireum IVE</a> documentation to setup the
+Sireum development environment</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Enable the <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">sbt</span> <span class="pre">shell</span> <span class="pre">for</span> <span class="pre">build</span> <span class="pre">and</span> <span class="pre">import</span></code> option</p>
 </div>
 </li>
 </ol>
-<ol class="arabic" start="3">
+<ol class="arabic" start="4">
 <li><p class="first">Sireum Awas is built using Scala and <a class="reference external" href="https://github.com/sireum/slang">Slang</a> with Java
 facades. Howevere, the Awas visulaizer is based on HTML5 and
-Javascript. This possible because of the ScalaJs, a Scala to
-Javascript cross compiler.</p>
-<ul>
-<li><p class="first">Any changes to Awas source code has to be cross compiled by
-executing the following command in the Sbt Shell</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>;project awas-js;fullOptJS
-</pre></div>
-</div>
-</li>
-</ul>
+Javascript. This is accomplished by cross compiling Scala to
+Javascript using <a class="reference external" href="https://www.scala-js.org/">ScalaJs</a></p>
 </li>
 <li><p class="first">Building the Sireum Awas Jar</p>
 <ul>
 <li><p class="first">Without Scala:</p>
-<p>Execute the following command in the Sbt shell</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>;project awasJar;assembly
+<p>Execute the following shell script in your terminal</p>
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>./sireum-v3/awas/buildAwasJar.sh
 </pre></div>
 </div>
 <p>Awas Jar can be found under <code class="docutils literal notranslate"><span class="pre">awasJar/target/scala-2.12/</span></code></p>
 </li>
 <li><p class="first">With Scala:</p>
-<p>Execute the following command in the Terminal</p>
-</li>
-</ul>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>./awas/buildSireumJar.sh
+<p>Execute the following shell script in your terminal</p>
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>./sireum-v3/awas/buildSireumJar.sh
 </pre></div>
 </div>
+<p>Rename the generated sireum.jar to awas.jar</p>
+</li>
+</ul>
 </li>
 </ol>
 </div>
 <div class="section" id="building-sireum-awas-plugin">
 <span id="id3"></span><h4>1.3.2.2. Building Sireum Awas plugin<a class="headerlink" href="#building-sireum-awas-plugin" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
-<li><p class="first">Open the Eclipse and install Scala IDE for Eclipse by following the
-instruction on this <a class="reference external" href="http://scala-ide.org/">link</a></p>
+<li><p class="first">Open the Eclipse and install the <a class="reference external" href="http://scala-ide.org/">Scala IDE for Eclipse</a> plugin</p>
 </li>
 <li><p class="first">Clone the following repository</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sireum/osate-plugin.git
-osate-plugin
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sireum/osate-plugin.git osate-plugin
 </pre></div>
 </div>
 </li>
-<li><p class="first">In Eclipse go to File -&gt; Import…</p>
+<li><p class="first">In Eclipse go to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Import...</span></code></p>
 </li>
-<li><p class="first">Expand the <code class="docutils literal notranslate"><span class="pre">General</span></code> folder and <code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">Existing</span> <span class="pre">Project</span> <span class="pre">into</span>
+<li><p class="first">Expand the <code class="docutils literal notranslate"><span class="pre">General</span></code> folder and select <code class="docutils literal notranslate"><span class="pre">Existing</span> <span class="pre">Project</span> <span class="pre">into</span>
 <span class="pre">Workspace</span></code>, then click <code class="docutils literal notranslate"><span class="pre">Next</span></code></p>
 </li>
 <li><p class="first">Enter the path to the directory where you cloned the repository and
@@ -312,17 +300,24 @@ and click <code class="docutils literal notranslate"><span class="pre">Finish</s
 <li><p class="first">Copy the jar built in the <a class="reference internal" href="#building-sireum-awas-jar">Building Sireum Awas Jar</a> step into the
 <code class="docutils literal notranslate"><span class="pre">&lt;ostate-plugin-dir&gt;/org.sireum.aadl.osate.awas/lib/</span></code> directory</p>
 </li>
+<li><p class="first">Run the OSATE eclipse instance by clinking the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button from
+the <code class="docutils literal notranslate"><span class="pre">Toolbar</span></code> using the <code class="docutils literal notranslate"><span class="pre">OSATE2</span></code> run configuration</p>
+</li>
 </ol>
 </div>
 <div class="section" id="running-awas">
-<h4>1.3.2.3. Running Awas<a class="headerlink" href="#running-awas" title="Permalink to this headline">¶</a></h4>
-<ol class="arabic simple">
-<li>Open an AADL model in OSATE and build an instance model (follow
-<a class="reference external" href="https://wiki.sei.cmu.edu/aadl/index.php/Editing_a_first_AADL_model">these</a> instructions to create an instance model)</li>
-<li>Select a system implementation from the <code class="docutils literal notranslate"><span class="pre">Outline</span> <span class="pre">view</span></code> and select
+<span id="id4"></span><h4>1.3.2.3. Running Awas<a class="headerlink" href="#running-awas" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Open an AADL model in OSATE and build an instance model (follow
+<a class="reference external" href="https://wiki.sei.cmu.edu/aadl/index.php/Editing_a_first_AADL_model">these</a> instructions to create an instance model)</p>
+</li>
+<li><p class="first">Select a system implementation from the <code class="docutils literal notranslate"><span class="pre">Outline</span> <span class="pre">view</span></code> and select
 <code class="docutils literal notranslate"><span class="pre">OSATE</span> <span class="pre">&gt;</span> <span class="pre">Sireum</span> <span class="pre">Bridge</span> <span class="pre">&gt;</span> <span class="pre">Generate</span> <span class="pre">Awas</span> <span class="pre">Visulaizer</span></code> from the menu
-bar</li>
-<li>In the popup, select a directory to save the generated Awas visualizer.</li>
+bar</p>
+<img alt="../../_images/awas_viz_save.png" src="../../_images/awas_viz_save.png" />
+</li>
+<li><p class="first">In the popup, select a directory to save the generated Awas visualizer.</p>
+</li>
 </ol>
 </div>
 </div>

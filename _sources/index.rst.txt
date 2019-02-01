@@ -35,11 +35,11 @@ component-based systems. It consists of OSATE plugin, analysis
 algorithms, and interactive model explorer.
 
 The Awas OSATE plugin generates a self-contained web-page(here onwards
-referred as Awas visualizer) that provides an interactive environment
-to explore and analyze component-based systems. The generated Awas
-visualizer is independent of the OSATE. Thus facilitating the user to
-refer to the model even in a handlheld computing device without
-installing the modeling environment.
+referred to as the Awas visualizer) that provides an interactive
+environment to explore and analyze component-based systems. The
+generated Awas visualizer is a self contained website. This allows the
+user to explore the model even in devices that are not supported by
+OSATE.
 
 Awas is an `open source <https://github.com/sireum/v3-awas>`__ project released under
 the `Simplified BSD <https://github.com/sireum/v3/blob/release/license.md>`__ license.
