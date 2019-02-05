@@ -882,6 +882,7 @@ Known Issues
   - Solution in development:
 
     1. Capturing the source location from the instance model into the Awas graphs
+       
 
 * High page load time: Currently, the graph rendering and the graph cycles are computed
   during the page load and when enabling or disabling the ``View
@@ -916,7 +917,10 @@ Known Issues
        developed on top of Fault Propagation and Transformation
        Calculus(FPTC)
 
-    2. Long term goal: Discharge the query specific sub system to model checkers e.g. AltaRica, etc. 
+    2. Long term goal: Discharge the query specific sub system to model checkers e.g. AltaRica, etc.
+
+* Some browsers may restrict images or script elements when opened as a local HTML files
+
 
        
        
