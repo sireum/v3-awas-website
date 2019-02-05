@@ -517,15 +517,18 @@ The query view tab contains two additional tabs:
 
       This can be a canonical representation
       of a node, port, or an error token or a previously executed
-      query name.
+      query name. 
       
    2. Reach Expression:
 
       All reach expressions start with the term ``reach,`` and the
       term after the ``reach`` indicates the direction of reachability
       and the rest of the expression identifies the canonical
-      representation of the port.
-   
+      representation of the port ``send_map``.
+
+   .. note:: Awas query expressions are case sensitive.
+
+      
 Multiple Query Results
 ----------------------
 
@@ -874,11 +877,17 @@ error token
 Known Issues
 ************
 
-* Currently, the graph rendering and the graph cycles are computed
-  during the page load time and when enabling or disabling the ``View
-  binding edges``. Therefore, for a large model, this may take a while to compute
+* Integration with the declarative model
 
   - Solution in development:
+
+    1. Capturing the source location from the instance model into the Awas graphs
+
+* High page load time: Currently, the graph rendering and the graph cycles are computed
+  during the page load and when enabling or disabling the ``View
+  binding edges``. Therefore, for a large model, this may take a while to compute
+
+  - Solutions in development:
     
     1. Use web workers to render in the browser parallelly
     2. Launch a local server from the OSATE plugin, upon opening the

@@ -530,9 +530,13 @@ query name.</p>
 <p>All reach expressions start with the term <code class="docutils literal notranslate"><span class="pre">reach,</span></code> and the
 term after the <code class="docutils literal notranslate"><span class="pre">reach</span></code> indicates the direction of reachability
 and the rest of the expression identifies the canonical
-representation of the port.</p>
+representation of the port <code class="docutils literal notranslate"><span class="pre">send_map</span></code>.</p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Awas query expressions are case sensitive.</p>
+</div>
 </li>
 </ol>
 <div class="section" id="multiple-query-results">
@@ -760,11 +764,19 @@ error token</p>
 <div class="section" id="known-issues">
 <h2>2.6. Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Currently, the graph rendering and the graph cycles are computed
-during the page load time and when enabling or disabling the <code class="docutils literal notranslate"><span class="pre">View</span>
-<span class="pre">binding</span> <span class="pre">edges</span></code>. Therefore, for a large model, this may take a while to compute</p>
+<li><p class="first">Integration with the declarative model</p>
 <ul class="simple">
 <li>Solution in development:<ol class="arabic">
+<li>Capturing the source location from the instance model into the Awas graphs</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p class="first">High page load time: Currently, the graph rendering and the graph cycles are computed
+during the page load and when enabling or disabling the <code class="docutils literal notranslate"><span class="pre">View</span>
+<span class="pre">binding</span> <span class="pre">edges</span></code>. Therefore, for a large model, this may take a while to compute</p>
+<ul class="simple">
+<li>Solutions in development:<ol class="arabic">
 <li>Use web workers to render in the browser parallelly</li>
 <li>Launch a local server from the OSATE plugin, upon opening the
 Awas visualizer, process the graphs in the server rather than
