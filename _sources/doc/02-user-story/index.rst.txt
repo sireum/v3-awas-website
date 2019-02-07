@@ -827,6 +827,8 @@ authorized party can communicate with the UAV. We can abuse the AADL
 EMV2 language constructs to model these simple properties and use Awas
 on top of it.
 
+.. _Query 7: 
+
 Query 7
    Do only authorized and well-formed maps reach the flight controller?
 
@@ -860,7 +862,7 @@ is highlighted. This shows neither ``unauthenticated`` nor
 ``not_wellformed`` reaches the flight controller.
 
 Also notice the use of ``port-error`` term instead of listing each
-error token
+error token in the query. The following query's behavior is identical to `Query 7`_.
 
 .. code::
       

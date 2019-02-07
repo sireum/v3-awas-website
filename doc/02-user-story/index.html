@@ -19,8 +19,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/awas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="1. Getting Started" href="../01-getting-started/index.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="search" title="Search" href="../../search.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133922066-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -741,7 +740,7 @@ the UAV system, one of the security property is that only the
 authorized party can communicate with the UAV. We can abuse the AADL
 EMV2 language constructs to model these simple properties and use Awas
 on top of it.</p>
-<dl class="docutils">
+<dl class="docutils" id="query-7">
 <dt>Query 7</dt>
 <dd><p class="first">Do only authorized and well-formed maps reach the flight controller?</p>
 <p>We can check this using Awas by the following query:</p>
@@ -762,7 +761,7 @@ query view, we can notice only the <code class="docutils literal notranslate"><s
 is highlighted. This shows neither <code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> nor
 <code class="docutils literal notranslate"><span class="pre">not_wellformed</span></code> reaches the flight controller.</p>
 <p>Also notice the use of <code class="docutils literal notranslate"><span class="pre">port-error</span></code> term instead of listing each
-error token</p>
+error token in the query. The following query’s behavior is identical to <a class="reference internal" href="#query-7">Query 7</a>.</p>
 <div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">only_wellformed_authorized</span> <span class="o">=</span> <span class="kr">reach paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="p">{</span><span class="nc">UAS_Errors.wellformed_authenticated</span><span class="p">, </span><span class="nc">UAS_Errors.not_wellformed_unauthenticated</span><span class="p">, </span><span class="nc">UAS_Errors.not_wellformed_authenticated</span><span class="p">, </span><span class="nc">UAS_Errors.wellformed_unauthenticated</span><span class="p">}</span><span class="kr"></span>
 <span class="kr">                                           to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span><span class="p">{</span><span class="nc">UAS_Errors.wellformed_authenticated</span><span class="p">}</span>
 </pre></div>

@@ -1,8 +1,12 @@
 .. toctree::
    :hidden:
 
+.. meta::
+   :description: AADL model explorer, information flow analyzer and AADL abstract interpreter
+   :keywords: Awas, Sireum, AADL, OSATE, EMV2, error, fault, infromation flow, hazard, UxAS, STPA, FMEA, FIA, fault tree 
+      
    doc/index.rst
-
+   
 .. include:: def.rst
 
 Home
