@@ -766,14 +766,14 @@ The following Awas query can answer `Query 4`_.
 
     GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map
                                                                to UAS_Impl_Instance.UAV.FCTL.waypoint
-							          with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)
+							          with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FLT:port)
 
 
 .. raw:: html
 
    </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
    <button id="q8"
-   data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)">
+   data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FLT:port)">
    <img height="20" src="../../_static/clippy.svg" alt="Copy to
    clipboard"/> </button> </td> </tr> </table> <script> new
    Clipboard(document.getElementById('q8'));
