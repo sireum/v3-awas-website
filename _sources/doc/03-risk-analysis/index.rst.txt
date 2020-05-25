@@ -1,0 +1,37 @@
+.. raw:: html
+
+   <script src="../../_static/clipboard.min.js" ></script> <script
+   src="../../_static/class.js" ></script> <script
+   src="../../_static/date.js" ></script>
+   <br/>
+   <font color="darkgray">
+   <big><big><b>
+   Sireum Awas Documentation
+   </b></big></big>
+   </font>
+   <br/>
+   <font color="black">
+   <big><big><big><big><b>
+   3. Risk Analysis
+   </b></big></big></big></big>
+   </font>
+
+Sireum Awas Risk Analysis
+#########################
+.. highlight:: awas
+
+
+
+ISO 14971/AAMI 80001
+*********************
+
+
+
+       
+       
+
+     
+
+ 
+
+ 

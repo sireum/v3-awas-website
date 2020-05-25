@@ -13,13 +13,12 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../../_static/awas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Sireum Awas User Stories" href="../02-user-story/index.html" />
+    <link rel="prev" title="Sireum Awas Documentation" href="../index.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133922066-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -48,7 +47,8 @@
           <ul class="nav navbar-nav">
             
                 <li><a href="#">Download</a></li>
-                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="../02-user-story/index.html">Visualizer User Story</a></li>
+                <li><a href="../03-risk-analysis/index.html">Risk Analysis</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -60,34 +60,6 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"></ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#"> <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">1. Getting Started</a><ul>
-<li><a class="reference internal" href="#sireum-awas-pluging-for-osate">1.1. Sireum Awas pluging for OSATE</a></li>
-<li><a class="reference internal" href="#sireum-awas-jar">1.2. Sireum Awas JAR</a></li>
-<li><a class="reference internal" href="#sireum-awas-source-distribution">1.3. Sireum Awas source distribution</a><ul>
-<li><a class="reference internal" href="#prerequisites">1.3.1. Prerequisites</a></li>
-<li><a class="reference internal" href="#installing-and-running-awas">1.3.2. Installing and Running Awas</a><ul>
-<li><a class="reference internal" href="#building-sireum-awas-jar">1.3.2.1. Building Sireum Awas Jar</a></li>
-<li><a class="reference internal" href="#building-sireum-awas-plugin">1.3.2.2. Building Sireum Awas plugin</a></li>
-<li><a class="reference internal" href="#running-awas">1.3.2.3. Running Awas</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</ul>
 </li>
               
             
@@ -113,7 +85,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <script src="../../_static/clipboard.min.js" ></script> <script
 src="../../_static/class.js" ></script> <script
@@ -218,14 +190,14 @@ as <code class="docutils literal notranslate"><span class="pre">Eclipse</span></
 <li><p class="first">Clone the following repositories</p>
 <ul>
 <li><p class="first">Using HTTPS:</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/sireum/v3.git sireum-v3
-git clone https://github.com:sireum/air.git sireum-v3/aadl/ir
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/sireum/v3.git
+sireum-v3 git clone https://github.com:sireum/air.git sireum-v3/aadl/ir
 </pre></div>
 </div>
 </li>
 <li><p class="first">Using SSH:</p>
-<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive git@github.com:sireum/v3.git sireum-v3
-git clone git@github.com:sireum/air.git sireum-v3/aadl/ir
+<div class="code bash highlight-none notranslate"><div class="highlight"><pre><span></span>git clone --recursive git@github.com:sireum/v3.git
+sireum-v3 git clone git@github.com:sireum/air.git sireum-v3/aadl/ir
 </pre></div>
 </div>
 </li>

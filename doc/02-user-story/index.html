@@ -13,13 +13,12 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../../_static/awas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Sireum Awas Risk Analysis" href="../03-risk-analysis/index.html" />
+    <link rel="prev" title="1. Getting Started" href="../01-getting-started/index.html" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133922066-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -48,7 +47,8 @@
           <ul class="nav navbar-nav">
             
                 <li><a href="../01-getting-started/index.html">Download</a></li>
-                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="#">Visualizer User Story</a></li>
+                <li><a href="../03-risk-analysis/index.html">Risk Analysis</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -60,53 +60,6 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"></ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#"> <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">2. Sireum Awas User Stories</a><ul>
-<li><a class="reference internal" href="#sireum-awas-capabilities">2.1. Sireum Awas Capabilities</a></li>
-<li><a class="reference internal" href="#simple-uav-system">2.2. Simple UAV System</a></li>
-<li><a class="reference internal" href="#model-navigation">2.3. Model Navigation</a><ul>
-<li><a class="reference internal" href="#uas-the-top-level-system-with-ground-station-and-uav">2.3.1. UAS: The top level system with ground station and UAV</a></li>
-<li><a class="reference internal" href="#uav-composed-of-mission-computer-and-flight-controller">2.3.2. UAV - Composed of Mission computer and Flight Controller</a></li>
-<li><a class="reference internal" href="#mission-computer-composed-of-radio-uart-and-software-components">2.3.3. Mission computer - Composed of Radio, UART and Software Components</a></li>
-<li><a class="reference internal" href="#software-composed-of-drivers-and-logic-for-computing-the-waypoints">2.3.4. Software - Composed of drivers and logic for computing the waypoints</a></li>
-<li><a class="reference internal" href="#awas-visualizer-interface">2.3.5. Awas Visualizer Interface</a></li>
-<li><a class="reference internal" href="#view-options">2.3.6. View Options</a><ul>
-<li><a class="reference internal" href="#flows">2.3.6.1. Flows</a></li>
-<li><a class="reference internal" href="#connections">2.3.6.2. Connections</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#dependency-analysis">2.4. Dependency Analysis</a><ul>
-<li><a class="reference internal" href="#forward-and-backward-analysis">2.4.1. Forward and Backward Analysis</a></li>
-<li><a class="reference internal" href="#dependency-analysis-using-queries">2.4.2. Dependency Analysis Using Queries</a><ul>
-<li><a class="reference internal" href="#multiple-query-results">2.4.2.1. Multiple Query Results</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#complex-queries">2.4.3. Complex Queries</a><ul>
-<li><a class="reference internal" href="#source-to-destination-query">2.4.3.1. Source to Destination Query</a></li>
-<li><a class="reference internal" href="#path-queries">2.4.3.2. Path Queries</a></li>
-<li><a class="reference internal" href="#path-based-filter">2.4.3.3. Path Based Filter</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#risk-analysis">2.5. Risk Analysis</a></li>
-<li><a class="reference internal" href="#known-issues">2.6. Known Issues</a></li>
-</ul>
-</li>
-</ul>
-</ul>
 </li>
               
             
@@ -132,7 +85,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <script src="../../_static/clipboard.min.js" ></script> <script
 src="../../_static/class.js" ></script> <script
@@ -688,12 +641,12 @@ containing the result.</p>
 <p>The following Awas query can answer <a class="reference internal" href="#query-4">Query 4</a>.</p>
 <table width="100%" > <tr> <td><div class="code highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller_refined_paths</span> <span class="o">=</span> <span class="kr">reach </span><span class="ow">refined </span><span class="kr">paths from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"></span>
 <span class="kr">                                                           to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span>
-                                                              <span class="kr">with</span> <span class="kr">none</span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.MCMP.PROC_SW.FLT</span><span class="kr">:port</span><span class="p">)</span>
+                                                              <span class="kr">with</span> <span class="kr">none</span><span class="p">(</span><span class="nc">UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL</span><span class="kr">:port</span><span class="p">)</span>
 </pre></div>
 </div>
 </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
 <button id="q8"
-data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FLT:port)">
+data-clipboard-text="GS_flight_controller_refined_paths = reach refined paths from UAS_Impl_Instance.GND.send_map to UAS_Impl_Instance.UAV.FCTL.waypoint with none(UAS_Impl_Instance.UAV.MCMP.PROC_SW.FTL:port)">
 <img height="20" src="../../_static/clippy.svg" alt="Copy to
 clipboard"/> </button> </td> </tr> </table> <script> new
 Clipboard(document.getElementById('q8'));
@@ -768,8 +721,77 @@ error token in the query. The following query’s behavior is identical to <a cl
 </div>
 <a class="reference internal image-reference" href="../../_images/query_error_tokens.png"><img alt="Query with error tokens" class="align-center" src="../../_images/query_error_tokens.png" style="width: 100%;" /></a>
 </div>
+<div class="section" id="query-language-grammar">
+<h2>2.6. Query Language Grammar<a class="headerlink" href="#query-language-grammar" title="Permalink to this headline">¶</a></h2>
+<p>Simplified version:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>modelFile
+    :   model EOF
+    ;
+
+model
+    : queryStatement+
+    ;
+
+queryStatement
+    : ID &#39;=&#39; queryExpr
+    ;
+
+queryExpr
+    : &#39;reach&#39; reachExpr (((&#39;-&#39; | &#39;union&#39; | &#39;intersect&#39;) queryExpr) | &#39;:&#39; filter)?
+    | primaryExpr (((&#39;-&#39; | &#39;union&#39; | &#39;intersect&#39;) queryExpr) | &#39;:&#39; filter)?
+    ;
+
+reachExpr
+    : (&#39;forward&#39; | &#39;backward&#39;) queryExpr
+    | &#39;from&#39; queryExpr &#39;to&#39; queryExpr
+    | (&#39;refined&#39;)? (&#39;simple&#39;)? &#39;paths from&#39; queryExpr &#39;to&#39; queryExpr &#39;with&#39; withExpr
+    ;
+
+withExpr
+    : (&#39;some&#39; | &#39;all&#39; | &#39;none&#39;) &#39;(&#39; queryExpr &#39;)&#39;
+    ;
+
+primaryExpr
+    : nodeNameError
+    | &#39;(&#39; queryExpr &#39;)&#39;
+    | &#39;{&#39; nodeNameError (&#39;,&#39; nodeNameError)+ &#39;}&#39;
+    ;
+
+filter
+    : node
+    | port-error
+    | port
+    | in-port
+    | out-port
+    | error
+    | source
+    | sink
+    ;
+
+nodeNameError
+    :  nodeName error?
+    ;
+
+nodeName
+    : ID(&#39;.&#39; ID)*
+    ;
+
+error
+    : &#39;{&#39; errorId (&#39;,&#39; errorId)* &#39;}&#39;
+    ;
+
+errorId
+    : ID (&#39;.&#39; ID)*
+    ;
+
+ID
+    : ([A-Z] | [a-z]) ([A-Z] | [a-z] | [0-9]| &#39;_&#39;)*
+    ;
+</pre></div>
+</div>
+</div>
 <div class="section" id="known-issues">
-<h2>2.6. Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Integration with the declarative model</p>
 <ul class="simple">

@@ -10,14 +10,10 @@
 Sireum Awas Documentation
 ###########################
 
-.. meta::
-   :description: AADL model explorer, information flow analyzer and AADL abstract interpreter
-   :keywords: Awas, Sireum, AADL, OSATE, EMV2, error, fault, infromation flow, hazard, UxAS, STPA, FMEA, FIA, fault tree 
-
 .. toctree::
    :maxdepth: 4
    :numbered: 4
 
    01-getting-started/index.rst
    02-user-story/index.rst
-   
+   03-risk-analysis/index.rst	      
