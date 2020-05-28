@@ -20,29 +20,30 @@ Sireum Awas Risk Analysis
 #########################
 
 
-Risk Management is part of the development process in critical system
-domain. Although  interleaved into every facet of the system
+In the context of Model Based System Engineering (MBSE), risk
+management is an important part of developing critical
+systems. Although interleaved into every facet of the system
 development process, artifacts generated in the process are essential
-for obtaining regulatory certifacation process. Risk analysis, part of
-the risk management consists of mechanical procedure of finding causes
-for system failure. Awas's reachability analysis and visualization
-capabilities are useful exploring and communicating the failure
-scenarios and the effectiveness of the measure taken to eliminate
-failure.
+for obtaining regulatory certifications. Risk analysis, part of the
+risk management consists of mechanical procedure of finding causes for
+reasonable foreseeable system failures. Awas's reachability analysis
+and visualization capabilities are useful in exploring and communicating
+the failure scenarios and in ensuring the effectiveness of the measure
+taken to eliminate failures.
 
 ISO 14971/AAMI 80001
 *********************
 
-In medical domain, ISO 14971 is the widly adapted international
+In medical domain, ISO 14971 is the widely adapted international
 standard for risk management. The following sections describes: 
 
-* Discription of the OpenPCA Pump medical device model
+* Description of the OpenPCA Pump medical device model
 
 * The application of ISO 14971 to Open PCA Pump model and the use of
   AADL properties to capture risk management concepts
 
 * Use of Error Modeling Version 2(EMV2) annex and Awas reachability
-  analysis to accomplish crucial setps in the ISO 14971 risk
+  analysis to accomplish crucial steps in the ISO 14971 risk
   management process
 
 OpenPCA Pump Model
@@ -142,7 +143,7 @@ file. The regulatory authorities check for the device compliance by
 inspecting the risk management file. The manufacturer shall perform
 the following risk analysis steps:
 
-1. identify intended use and reasonably foreseeable misuse
+1. Identify intended use and reasonably foreseeable misuse
 
 2. Identification of characteristics related to safety
 
