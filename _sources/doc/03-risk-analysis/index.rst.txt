@@ -150,11 +150,31 @@ the following risk analysis steps:
 
 4. Risk estimation
 
+Risk Analysis Sample Scenario
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the scenario where a patient presses the bolus multiple times
+in a short duration. In other words, pressing the bolus again and
+again before the drug takes effect. If the pump infuses the drug each
+time, there is a possibility of overdosing the patient. In this
+scenario over infusion is the hazard and overdosing(infusing the drug
+above the safe level) is the hazardous situation. The below figure
+provides the expected result of performing the risk analysis process
+for this scenario.
+
+.. image:: figures/over-infusion.png
+      :align: center
+      :width: 50%
+      :alt: Risk analysis process for over infusion
+
+
+
 AADL 14971 Property template
 ----------------------------
 
 We took advantage of the user definable property types feature of AADL
-and developed a set of properties to capture ISO 14971 concepts in AADL.
+and developed a set of properties to capture ISO 14971 concepts in a
+AADL model.
 
 .. literalinclude:: code/ISO14971_80001.aadl
       :language: aadl
@@ -165,7 +185,7 @@ Property instance
 
 - Harm
 
-  .. code:: aadl
+  .. code:: aadlproperty
        
     	H1 : constant ISO14971_80001::Harm => [
 		ID => "H1";
@@ -175,16 +195,16 @@ Property instance
 
 - Hazardous Situation
 
-  .. code:: aadl    
+  .. code:: aadlproperty
 
 	OverInfusion : constant ISO14971_80001::Hazardous_Situation => [
 		ID => "OverInfusion";
 		Description => "Infusing drug when the patient's health is deteriorating";
 		Hazard => Hazards::Haz1;
 		Paths_to_Harm => ([
-			Harm => Harms::H1;
-			Contributing_Factors => (ContributingFactors::HealthDeteriorating); --fill
-			Probability_of_Transition => Remote;
+	          Harm => Harms::H1;
+		  Contributing_Factors => (ContributingFactors::HealthDeteriorating);
+		  Probability_of_Transition => Remote;
 		]);
 		Risk => High;
 		Probability => Remote;
@@ -192,7 +212,7 @@ Property instance
 
 - Hazard
   
-  .. code:: aadl
+  .. code:: aadlproperty
 
 	Haz1 : constant ISO14971_80001::Hazard => [
 		ID => "Haz1";
@@ -202,7 +222,7 @@ Property instance
 
 - Initiating Cause
   
-  .. code:: aadl
+  .. code:: aadlproperty
 
 	IncorrectDrug : constant ISO14971_80001::Cause => [
 		ID => "IncorrectDrug";
@@ -215,7 +235,7 @@ Application of property
 
 - Hazardous Situation
 
-  .. code:: aadl
+  .. code:: aadlproperty
 
         ISO14971_80001::Hazardous_Situations => (
 		HazardousSituations::OverInfusion, 
@@ -223,18 +243,19 @@ Application of property
 		HazardousSituations::IncorrectDrug
 	);       
        
--- Hazard
+- Hazard
 
-  .. code:: aadl
+  .. code:: aadlproperty
 
           ISO14971_80001::Hazards => (Hazards::Haz1) applies to act.drug_outlet.DrugOverInfusion;
  	
 
--- Cause
+- Cause
 
-  .. code:: aadl
+  .. code:: aadlproperty
 
           ISO14971_80001::causes => (Causes::FrequentButtonPress) applies to sense.patient_button_press.TooSoonPress;
+
 
 Awas Visualization
 ------------------

@@ -208,215 +208,204 @@ the following risk analysis steps:</p>
 <li><p>Risk estimation</p></li>
 </ol>
 </div>
+<div class="section" id="risk-analysis-sample-scenario">
+<h4><span class="section-number">3.1.2.3. </span>Risk Analysis Sample Scenario<a class="headerlink" href="#risk-analysis-sample-scenario" title="Permalink to this headline">¶</a></h4>
+<p>Consider the scenario where a patient presses the bolus multiple times
+in a short duration. In other words, pressing the bolus again and
+again before the drug takes effect. If the pump infuses the drug each
+time, there is a possibility of overdosing the patient. In this
+scenario over infusion is the hazard and overdosing(infusing the drug
+above the safe level) is the hazardous situation. The below figure
+provides the expected result of performing the risk analysis process
+for this scenario.</p>
+<a class="reference internal image-reference" href="../../_images/over-infusion.png"><img alt="Risk analysis process for over infusion" class="align-center" src="../../_images/over-infusion.png" style="width: 50%;" /></a>
+</div>
 </div>
 <div class="section" id="aadl-14971-property-template">
 <h3><span class="section-number">3.1.3. </span>AADL 14971 Property template<a class="headerlink" href="#aadl-14971-property-template" title="Permalink to this headline">¶</a></h3>
 <p>We took advantage of the user definable property types feature of AADL
-and developed a set of properties to capture ISO 14971 concepts in AADL.</p>
-<div class="highlight-aadl notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">property set</span><span class="w"> </span><span class="nc">ISO14971_80001</span><span class="w"> </span><span class="kn">is</span><span class="w"></span>
+and developed a set of properties to capture ISO 14971 concepts in a
+AADL model.</p>
+<div class="highlight-aadl notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">property set</span><span class="w"> </span><span class="nc">ISO14971_80001</span><span class="w"> </span><span class="kn">is</span><span class="w"></span>
 <span class="k">with</span><span class="w"> </span><span class="nn">EMV2</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">	</span><span class="vg">SystemInfo</span><span class="p">: </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w">	</span>
-<span class="w">		</span><span class="nc">Name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--required</span>
-<span class="w">		</span><span class="nc">Description</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">		</span><span class="nc">IntendedUse</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">	</span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">(</span><span class="k">system</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="vg">SystemInfo</span><span class="p">: </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w">	</span>
+<span class="w">    </span><span class="nc">Name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                        </span><span class="c1">--required</span>
+<span class="w">    </span><span class="nc">Description</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                  </span><span class="c1">--optional</span>
+<span class="w">    </span><span class="nc">IntendedUse</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                  </span><span class="c1">--optional</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">(</span><span class="k">system</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="vg">Causes</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">source</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">type</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="vg">Causes</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">source</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">type</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">event</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="vg">Hazardous_Situations</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazardous_Situation</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">(</span><span class="k">system</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="vg">Hazardous_Situations</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazardous_Situation</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">(</span><span class="k">system</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="vg">Hazards</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazard</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">type</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="vg">Hazards</span><span class="p">: </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazard</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">type</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="vg">Harm</span><span class="p">: </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                          </span><span class="c1">-- required</span>
+<span class="w">    </span><span class="nc">Description</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                 </span><span class="c1">-- optional</span>
+<span class="w">    </span><span class="nc">Severity</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::SeverityScales</span><span class="p">;</span><span class="w">                                </span><span class="c1">-- Catastrophic, High, Medium, Low, Negligible --optional</span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="vg">Harm</span><span class="p">: </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">			</span><span class="nc">ID</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--required</span>
-<span class="w">			</span><span class="nc">Description</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">			</span><span class="nc">Severity</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::SeverityScales</span><span class="p">;</span><span class="w"> </span><span class="c1">--Catastrophic, High, Medium, Low, Negligible --optional</span>
-<span class="w">	</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Cause</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                         </span><span class="c1">-- required</span>
+<span class="w">    </span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                </span><span class="c1">-- optional</span>
+<span class="w">    </span><span class="nc">Basis</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="nc">ISO14971_80001::ProbabilityBasis</span><span class="p">;</span><span class="w">                               </span><span class="c1">-- Causes per hour, or causes per number of occurrences</span>
+<span class="w">    </span><span class="nc">NumberOfOccurrencesPerCause</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlinteger</span><span class="p">;</span><span class="w">                               </span><span class="c1">-- how many occurrences are expected to produce one hazard?                              </span>
+<span class="w">    </span><span class="nc">Probability</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w">                         </span><span class="c1">-- Frequent, Probable, occasional, remote, improbable  --optional</span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="nc">Cause</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">		</span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--required</span>
-<span class="w">		</span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">    	</span><span class="nc">Basis</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="nc">ISO14971_80001::ProbabilityBasis</span><span class="p">;</span><span class="w">  </span><span class="c1">--Causes per hour, or causes per number of occurrences</span>
-<span class="w">    	</span><span class="nc">NumberOfOccurrencesPerCause</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlinteger</span><span class="p">;</span><span class="w">  </span><span class="c1">--how many occurrences are expected to produce one hazard?                              </span>
-<span class="w">		</span><span class="nc">Probability</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w"> </span><span class="c1">--Frequent, Probable, occasional, remote, improbable  --optional</span>
-<span class="w">	</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Hazard</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                         </span><span class="c1">-- hazard unique identifier </span>
+<span class="w">    </span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                </span><span class="c1">-- description of the hazard eg: opioid --optional</span>
+<span class="w">    </span><span class="nc">Causes</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="p">;</span><span class="w">                                  </span><span class="c1">-- optional, provide only if you wish to override </span>
+<span class="w">  </span><span class="p">);</span><span class="w"> </span>
 <span class="w">	</span>
-<span class="w">	</span><span class="nc">Hazard</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">		</span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> 			   	</span><span class="c1">-- hazard unique identifier </span>
-<span class="w">		</span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">		</span><span class="c1">-- description of the hazard eg: opioid	--optional</span>
-<span class="w">		</span><span class="nc">Causes</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="p">;</span><span class="w"> </span><span class="c1">-- optional, merged with the computed, can be caused something outside of the system like fault in user manual or training </span>
-<span class="w">	</span><span class="p">);</span><span class="w"> </span>
+<span class="w">  </span><span class="c1">--circumstance in which people, property, or the environment are exposed to one or more hazard(s) (page 2)              </span>
+<span class="w">  </span><span class="nc">Hazardous_Situation</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                </span><span class="c1">-- optional</span>
+<span class="w">    </span><span class="nc">Hazard</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="nc">ISO14971_80001::Hazard</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nc">Severity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::SeverityScales</span><span class="p">;</span><span class="w">                               </span><span class="c1">-- optional, and computed. Provide value only if you wish to override </span>
+<span class="w">    </span><span class="nc">Paths_to_harm</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="nc">Harm</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::Harm</span><span class="p">;</span><span class="w">                                            </span><span class="c1">-- e.g. patient overdosed/fatality</span>
+<span class="w">      </span><span class="nc">Contributing_Factors</span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Contributing_Factor</span><span class="p">;</span><span class="w">     </span><span class="c1">-- e.g. Patient vitals are deteriorating  </span>
+<span class="w">      </span><span class="nc">Probability_of_Transition</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w">          </span><span class="c1">-- optional (used only for sorting and coloring)</span>
+<span class="w">    </span><span class="p">);</span><span class="w">                                                                       </span><span class="c1">-- optional</span>
+<span class="w">    </span><span class="nc">Risk</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::RiskLevels</span><span class="p">;</span><span class="w">                                       </span><span class="c1">-- optional, can be computed</span>
+<span class="w">    </span><span class="nc">Probability</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w">                         </span><span class="c1">-- optional</span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span>
+<span class="w">  </span><span class="nc">Contributing_Factor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">                                                </span><span class="c1">--optional</span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="c1">--circumstance in which people, property, or the environment are exposed to one or more hazard(s) (page 2)              </span>
-<span class="w">	</span><span class="nc">Hazardous_Situation</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">		</span><span class="nc">ID</span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w">	</span><span class="c1">--optional</span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Hazard</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="nc">ISO14971_80001::Hazard</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Severity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::SeverityScales</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span>
-<span class="w">		</span><span class="nc">Paths_to_harm</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">			</span><span class="nc">Harm</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::Harm</span><span class="p">;</span><span class="w"> </span><span class="c1">-- e.g. patient overdosed/fatality</span>
-<span class="w">			</span><span class="nc">Contributing_Factors</span><span class="p">:</span><span class="w"> </span><span class="kd">list of</span><span class="w"> </span><span class="nc">ISO14971_80001::Contributing_Factor</span><span class="p">;</span><span class="w">  </span><span class="c1">-- e.g. Patient vitals are deteriorating  </span>
-<span class="w">			</span><span class="nc">Probability_of_Transition</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional (used only for sorting and coloring)</span>
-<span class="w">		</span><span class="p">);</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Risk</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::RiskLevels</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional, can be computed</span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Probability</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">	</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span>
-<span class="w">	</span><span class="nc">Contributing_Factor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">record</span><span class="w"> 	</span>
-<span class="w">	</span><span class="p">(</span><span class="w"></span>
-<span class="w">		</span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"> </span><span class="c1">--optional</span>
-<span class="w">	</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span>
-<span class="w">	</span><span class="nc">Risk_Control</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span>
-<span class="w">	</span><span class="p">(</span><span class="w"></span>
-<span class="w">		</span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span>
-<span class="w">		</span><span class="nc">Effective_Probability</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w"> </span><span class="c1">--probability that the risk control mitigates an incoming error; Frequent, Probable, occasional, remote, improbable</span>
-<span class="w">		</span>
-<span class="w">	</span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">,</span>
+<span class="w">  </span><span class="nc">Risk_Control</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">record</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="nc">ID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nc">Description</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">aadlstring</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nc">Effective_Probability</span><span class="p">:</span><span class="w"> </span><span class="nc">ISO14971_80001::ProbabilityScales</span><span class="p">;</span><span class="w">                </span><span class="c1">-- probability that the risk control mitigates an incoming error;</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="p">({</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">behavior</span> <span class="nc">state</span><span class="p">,</span>
 <span class="p">                  {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">event</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">flow</span><span class="p">, {</span><span class="nc">emv2</span><span class="p">}</span><span class="o">**</span><span class="nc">error</span> <span class="nc">propagation</span><span class="p">);</span><span class="w"></span>
+
 <span class="c1">------------------------------------------------------</span>
 <span class="c1">------------------------Scales------------------------</span>
 <span class="c1">------------------------------------------------------</span>
 
-
-<span class="w">	</span><span class="vg">SeverityScales</span><span class="p">: </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">Catastrophic</span><span class="p">,</span><span class="w"> </span><span class="nc">High</span><span class="p">,</span><span class="w"> </span><span class="nc">Medium</span><span class="p">,</span><span class="w"> </span><span class="nc">Low</span><span class="p">,</span><span class="w"> </span><span class="nc">Negligible</span><span class="p">,</span><span class="w"> </span><span class="nc">Critical</span><span class="p">,</span><span class="w"> </span><span class="nc">Serious</span><span class="p">,</span><span class="w"> </span><span class="nc">Minor</span><span class="p">,</span><span class="w"> </span><span class="nc">NoEffect</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="c1">--for ISO 80001</span>
-<span class="w">	</span><span class="nc">Catatrophic</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">High</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Medium</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Low</span><span class="w">	</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Negligible</span><span class="w">	</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="c1">--ISO 14971 uses some different terms for severity</span>
-<span class="w">	</span><span class="nc">Critical</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Results in permanent impairment or life-threatening injury</span>
-<span class="w">	</span><span class="nc">Serious</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">--Results in injury or impairment requiring professional medical intervention</span>
-<span class="w">	</span><span class="nc">Minor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="c1">--Results in temporary injury or impairment not requiring professional medical intervention</span>
-<span class="w">  </span><span class="nc">NoEffect</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">--same as Negligible because EMV2::SeverityRange = [1..5]</span>
+<span class="w">  </span><span class="vg">SeverityScales</span><span class="p">: </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">Catastrophic</span><span class="p">,</span><span class="w"> </span><span class="nc">High</span><span class="p">,</span><span class="w"> </span><span class="nc">Medium</span><span class="p">,</span><span class="w"> </span><span class="nc">Low</span><span class="p">,</span><span class="w"> </span><span class="nc">Negligible</span><span class="p">,</span><span class="w"> </span><span class="nc">Critical</span><span class="p">,</span><span class="w"> </span><span class="nc">Serious</span><span class="p">,</span><span class="w"> </span><span class="nc">Minor</span><span class="p">,</span><span class="w"> </span><span class="nc">NoEffect</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">--for ISO 80001</span>
+<span class="w">  </span><span class="nc">Catatrophic</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">High</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Medium</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Low</span><span class="w">	</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Negligible</span><span class="w">	</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">--ISO 14971 uses some different terms for severity</span>
+<span class="w">  </span><span class="nc">Critical</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span><span class="c1">-- Results in permanent impairment or life-threatening injury</span>
+<span class="w">  </span><span class="nc">Serious</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">             </span><span class="c1">-- Results in injury or impairment requiring professional medical intervention</span>
+<span class="w">  </span><span class="nc">Minor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">               </span><span class="c1">-- Results in temporary injury or impairment not requiring professional medical intervention</span>
+<span class="w">  </span><span class="nc">NoEffect</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::SeverityRange</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">            </span><span class="c1">-- same as Negligible because EMV2::SeverityRange = [1..5]	</span>
 <span class="w">	</span>
+<span class="w">  </span><span class="nc">ProbabilityScales</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">Frequent</span><span class="p">,</span><span class="w"> </span><span class="nc">Probable</span><span class="p">,</span><span class="w"> </span><span class="nc">Occasional</span><span class="p">,</span><span class="w"> </span><span class="nc">Remote</span><span class="p">,</span><span class="w"> </span><span class="nc">Improbable</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="nc">ProbabilityScales</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">Frequent</span><span class="p">,</span><span class="w"> </span><span class="nc">Probable</span><span class="p">,</span><span class="w"> </span><span class="nc">Occasional</span><span class="p">,</span><span class="w"> </span><span class="nc">Remote</span><span class="p">,</span><span class="w"> </span><span class="nc">Improbable</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Frequent</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">A</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Probable</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">B</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Occasional</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">C</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Remote</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">D</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nc">Improbable</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">E</span><span class="p">;</span><span class="w"></span>
 <span class="w">	</span>
-<span class="w">	</span><span class="nc">Frequent</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">A</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Probable</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">B</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Occasional</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">C</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Remote</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">D</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="nc">Improbable</span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">EMV2::LikelihoodLabels</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">E</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span>
-<span class="w">	</span><span class="nc">RiskLevels</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">High</span><span class="p">,</span><span class="w"> </span><span class="nc">Moderate</span><span class="p">,</span><span class="w"> </span><span class="nc">Low</span><span class="p">);</span><span class="w"></span>
-<span class="c1">--ISO 14971 allows risks to be quantified as the number of uses for each adverse event, on average</span>
+<span class="w">  </span><span class="nc">RiskLevels</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">High</span><span class="p">,</span><span class="w"> </span><span class="nc">Moderate</span><span class="p">,</span><span class="w"> </span><span class="nc">Low</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">--ISO 14971 allows risks to be quantified as the number of uses for each adverse event, on average</span>
 <span class="w">  </span><span class="nc">ProbabilityBasis</span><span class="p">:</span><span class="w"> </span><span class="nc">type</span><span class="w"> </span><span class="kt">enumeration</span><span class="w"> </span><span class="p">(</span><span class="nc">CausesPerHour</span><span class="p">,</span><span class="w"> </span><span class="nc">NumberOfOccurrencesPerCause</span><span class="p">);</span><span class="w"></span>
 <span class="w">	</span>
 <span class="nc">end</span><span class="w"> </span><span class="nc">ISO14971_80001</span><span class="p">;</span><span class="w"></span>
@@ -426,44 +415,44 @@ and developed a set of properties to capture ISO 14971 concepts in AADL.</p>
 <h4><span class="section-number">3.1.3.1. </span>Property instance<a class="headerlink" href="#property-instance" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>Harm</p>
-<div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>H1 : constant ISO14971_80001::Harm =&gt; [
-        ID =&gt; &quot;H1&quot;;
-        Description =&gt; &quot;Patient Overdosed&quot;;
-        Severity =&gt; Catastrophic;
-];
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Harm</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;H1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Patient Overdosed&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Severity</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">Catastrophic</span><span class="p">;</span><span class="w"></span>
+<span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>Hazardous Situation</p>
-<div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>OverInfusion : constant ISO14971_80001::Hazardous_Situation =&gt; [
-        ID =&gt; &quot;OverInfusion&quot;;
-        Description =&gt; &quot;Infusing drug when the patient&#39;s health is deteriorating&quot;;
-        Hazard =&gt; Hazards::Haz1;
-        Paths_to_Harm =&gt; ([
-                Harm =&gt; Harms::H1;
-                Contributing_Factors =&gt; (ContributingFactors::HealthDeteriorating); --fill
-                Probability_of_Transition =&gt; Remote;
-        ]);
-        Risk =&gt; High;
-        Probability =&gt; Remote;
-];
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">OverInfusion</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazardous_Situation</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;OverInfusion&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Infusing drug when the patient&#39;s health is deteriorating&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Hazard</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nc">Hazards</span><span class="p">::</span><span class="nv">Haz1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Paths_to_Harm</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">([</span><span class="w"></span>
+<span class="w">          </span><span class="nc">Harm</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nc">Harms</span><span class="p">::</span><span class="nv">H1</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="nc">Contributing_Factors</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nc">ContributingFactors</span><span class="p">::</span><span class="nv">HealthDeteriorating</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="nc">Probability_of_Transition</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">Remote</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Risk</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">High</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Probability</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">Remote</span><span class="p">;</span><span class="w"></span>
+<span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>Hazard</p>
-<div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>Haz1 : constant ISO14971_80001::Hazard =&gt; [
-        ID =&gt; &quot;Haz1&quot;;
-        Description =&gt; &quot;Drug over-infusion&quot;;
-];
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">Haz1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazard</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Haz1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Drug over-infusion&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>Initiating Cause</p>
-<div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>IncorrectDrug : constant ISO14971_80001::Cause =&gt; [
-        ID =&gt; &quot;IncorrectDrug&quot;;
-        Description =&gt; &quot;Incorrect drug loaded into pump&quot;;
-        Probability =&gt;  Frequent;
-];
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">IncorrectDrug</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;IncorrectDrug&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Incorrect drug loaded into pump&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Probability</span><span class="w"> </span><span class="o">=&gt;</span><span class="w">  </span><span class="no">Frequent</span><span class="p">;</span><span class="w"></span>
+<span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -473,27 +462,25 @@ and developed a set of properties to capture ISO 14971 concepts in AADL.</p>
 <h4><span class="section-number">3.1.3.2. </span>Application of property<a class="headerlink" href="#application-of-property" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>Hazardous Situation</p>
-<div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>ISO14971_80001::Hazardous_Situations =&gt; (
-        HazardousSituations::OverInfusion,
-        HazardousSituations::UnderInfusion,
-        HazardousSituations::IncorrectDrug
-);
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">ISO14971_80001</span><span class="p">::</span><span class="nc">Hazardous_Situations</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">OverInfusion</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">UnderInfusion</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">IncorrectDrug</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+<li><p>Hazard</p>
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">ISO14971_80001</span><span class="p">::</span><span class="nc">Hazards</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nc">Hazards</span><span class="p">::</span><span class="nv">Haz1</span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="nc">act.drug_outlet.DrugOverInfusion</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+<li><p>Cause</p>
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">ISO14971_80001</span><span class="p">::</span><span class="nc">causes</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nc">Causes</span><span class="p">::</span><span class="nv">FrequentButtonPress</span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="nc">sense.patient_button_press.TooSoonPress</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 </ul>
-<p>– Hazard</p>
-<blockquote>
-<div><div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>ISO14971_80001::Hazards =&gt; (Hazards::Haz1) applies to act.drug_outlet.DrugOverInfusion;
-</pre></div>
-</div>
-</div></blockquote>
-<p>– Cause</p>
-<blockquote>
-<div><div class="highlight-aadl notranslate"><div class="highlight"><pre><span></span>ISO14971_80001::causes =&gt; (Causes::FrequentButtonPress) applies to sense.patient_button_press.TooSoonPress;
-</pre></div>
-</div>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="awas-visualization">
