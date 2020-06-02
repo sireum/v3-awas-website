@@ -113,20 +113,20 @@ Sireum Awas Documentation
 </b></big></big></big></big>
 </font><div class="section" id="sireum-awas-risk-analysis">
 <h1><span class="section-number">3. </span>Sireum Awas Risk Analysis<a class="headerlink" href="#sireum-awas-risk-analysis" title="Permalink to this headline">¶</a></h1>
-<p>In the context of Model Based System Engineering (MBSE), risk
-management is an important part of developing critical
+<p>In the context of Model-Based System Engineering (MBSE), risk
+management is an essential part of developing critical
 systems. Although interleaved into every facet of the system
-development process, artifacts generated in the process are essential
+development process, artifacts generated in the process are necessary
 for obtaining regulatory certifications. Risk analysis, part of the
-risk management consists of mechanical procedure of finding causes for
-reasonable foreseeable system failures. Awas’s reachability analysis
-and visualization capabilities are useful in exploring and communicating
-the failure scenarios and in ensuring the effectiveness of the measure
-taken to eliminate failures.</p>
-<div class="section" id="iso-14971-aami-80001">
-<h2><span class="section-number">3.1. </span>ISO 14971/AAMI 80001<a class="headerlink" href="#iso-14971-aami-80001" title="Permalink to this headline">¶</a></h2>
-<p>In medical domain, ISO 14971 is the widely adapted international
-standard for risk management. The following sections describes:</p>
+risk management, consists of a tedious process of finding causes for
+reasonably foreseeable system failures. Awas’s reachability analysis
+and visualization capabilities are useful in exploring and
+communicating the failure scenarios and in ensuring the effectiveness
+of the measure taken to eliminate failures.</p>
+<div class="section" id="iso-14971-aami-80001-tl-dr-open-pca-pump-awas-iso-14971-report">
+<h2><span class="section-number">3.1. </span>ISO 14971/AAMI 80001 <a class="reference external" href="../../_static/open-pca/risk-analysis-report.html">(TL;DR Open PCA Pump Awas ISO 14971 Report)</a><a class="headerlink" href="#iso-14971-aami-80001-tl-dr-open-pca-pump-awas-iso-14971-report" title="Permalink to this headline">¶</a></h2>
+<p>In the medical domain, ISO 14971 is the widely adopted international
+standard for risk management. The following sections describe:</p>
 <ul class="simple">
 <li><p>Description of the OpenPCA Pump medical device model</p></li>
 <li><p>The application of ISO 14971 to Open PCA Pump model and the use of
@@ -138,50 +138,49 @@ management process</p></li>
 <div class="section" id="openpca-pump-model">
 <h3><span class="section-number">3.1.1. </span>OpenPCA Pump Model<a class="headerlink" href="#openpca-pump-model" title="Permalink to this headline">¶</a></h3>
 <p>In this section, we illustrate (Open Patient Controlled Analgesic)
-Open PCA Pump medical device model. In the coming sections we use this
-model to demonstrate the application of Awas in the risk analysis
-process.</p>
+Open PCA Pump medical device model. In the subsequent parts of this
+document, we use this model to demonstrate Awas’s application in the
+risk analysis process.</p>
 <div class="section" id="background">
 <h4><span class="section-number">3.1.1.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h4>
 <a class="reference internal image-reference" href="../../_images/hospira-pumps-open-closed-above.jpg"><img alt="Hospira PCA Pump" class="align-center" src="../../_images/hospira-pumps-open-closed-above.jpg" style="width: 100%;" /></a>
-<p>A PCA Pump is a medical device used for pain management in a variety
-of clinical settings intended to administer opioid through
+<p>A PCA pump is a medical device used for pain management in a variety
+of clinical settings intended to administer opioids through
 intravenous(IV) infusion. Typically, a caregiver assembles the pump
 with the opioid and configures it based on the prescription. The
 prescription may include information such as the medication, quantity,
-rate of flow and duration. On infusing the drug, the pump may operate
-on either in basal mode or bolus mode. In basal mode, infusion of the
-drug happens in a constant rate of flow. In bolus mode, the pump
-operates at a high rate for a short period of time. The bolus
-(handheld switch) provided to the patient activates the bolus mode
-infusion. However, frequent activation of the bolus poses a serious
-overdose threat to the patient. In the past, PCA Pumps have harmed the
-patients and even led to death of a patient due to over infusion.</p>
+rate of flow, and duration. On infusing the drug, the pump may operate
+on either in basal mode or bolus mode. In basal mode, the infusion of
+the drug happens at a constant rate of flow. In bolus mode, the pump
+operates at a high rate for a short period. The bolus (handheld
+switch) provided to the patient activates the bolus mode
+infusion. However, frequent activation of the bolus poses a severe
+overdose threat to the patient. Historically, PCA Pumps have harmed
+the patients and led to a patient’s death due to over infusion.</p>
 </div>
 <div class="section" id="design">
 <h4><span class="section-number">3.1.1.2. </span>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h4>
 <p>We constructed the Open PCA Pump model based on the ISOSCELES medical
-device reference architecture. The reference architecture suggest the
-separation of functional components from the physical
-components. Also, provides templates for generic subsystems such as
-operation, safety, user interface, network interface, power and
+device reference architecture. The reference architecture suggests the
+separation of functional components from the physical components. It
+also provides templates for generic subsystems such as operation,
+safety, user interface, network interface, power, and
 sensor/actuators.</p>
 <a class="reference internal image-reference" href="../../_images/PCAcontainment.png"><img alt="PCA Pump Instance Diagram" class="align-center" src="../../_images/PCAcontainment.png" style="width: 80%;" /></a>
 <p>The top level of the functional subsystem separates the safety
 subsystem from the rest of the that detects and mitigates the faulty
 behaviors. Error modeling covers both physical and functional
-subsystem and the errors flows from physical to functional subsystem
+subsystems, and the errors flow from physical to functional subsystems
 and vise versa via the AADL bindings mechanism.</p>
 </div>
 </div>
-<div class="section" id="id1">
-<h3><span class="section-number">3.1.2. </span>ISO 14971/AAMI 80001<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="iso-14971-aami-80001">
+<h3><span class="section-number">3.1.2. </span>ISO 14971/AAMI 80001<a class="headerlink" href="#iso-14971-aami-80001" title="Permalink to this headline">¶</a></h3>
 <p>ISO 14971 is a risk management standard intended for medical device
-manufactures. In the medical device context, risk is related to
-injury, not only to the patient, but also other users such as
-clinicians. Risk analysis is a part of the risk management process in
-which Awas can assist an analysis to identify, communicate and
-mitigate risk.</p>
+manufacturers. In the medical device context, the risk is related to
+injury to the patient and other users such as clinicians. Risk
+analysis is a part of the risk management process in which Awas can
+assist an analyst in identifying, communicate, and mitigate risk.</p>
 <a class="reference internal image-reference" href="../../_images/risk-management-process.png"><img alt="Risk Management Process" class="align-center" src="../../_images/risk-management-process.png" style="width: 60%;" /></a>
 <div class="section" id="risk-analysis">
 <h4><span class="section-number">3.1.2.1. </span>Risk Analysis<a class="headerlink" href="#risk-analysis" title="Permalink to this headline">¶</a></h4>
@@ -199,7 +198,7 @@ mitigate risk.</p>
 <h4><span class="section-number">3.1.2.2. </span>Risk Analysis Process<a class="headerlink" href="#risk-analysis-process" title="Permalink to this headline">¶</a></h4>
 <p>The medical device manufacturer performs risk analysis and records the
 risk analysis activities and their results in the risk management
-file. The regulatory authorities check for the device compliance by
+file. The regulatory authorities check for device compliance by
 inspecting the risk management file. The manufacturer shall perform
 the following risk analysis steps:</p>
 <ol class="arabic simple">
@@ -212,21 +211,21 @@ the following risk analysis steps:</p>
 <div class="section" id="risk-analysis-sample-scenario">
 <h4><span class="section-number">3.1.2.3. </span>Risk Analysis Sample Scenario<a class="headerlink" href="#risk-analysis-sample-scenario" title="Permalink to this headline">¶</a></h4>
 <p>Consider the scenario where a patient presses the bolus multiple times
-in a short duration. In other words, pressing the bolus again and
-again before the drug takes effect. If the pump infuses the drug each
-time, there is a possibility of overdosing the patient. In this
-scenario over infusion is the hazard and overdosing(infusing the drug
-above the safe level) is the hazardous situation. The below figure
-provides the expected result of performing the risk analysis process
-for this scenario.</p>
+in a short duration. If the pump infuses the drug each time, there is
+a possibility of overdosing the patient. In this scenario, over
+infusion is the hazard, and overdosing is the hazardous situation. The
+below figure provides the expected result of performing the risk
+analysis process for this scenario.</p>
 <a class="reference internal image-reference" href="../../_images/over-infusion.png"><img alt="Risk analysis process for over infusion" class="align-center" src="../../_images/over-infusion.png" style="width: 50%;" /></a>
 </div>
 </div>
 <div class="section" id="aadl-14971-property-template">
 <h3><span class="section-number">3.1.3. </span>AADL 14971 Property template<a class="headerlink" href="#aadl-14971-property-template" title="Permalink to this headline">¶</a></h3>
-<p>We took advantage of the user definable property types feature of AADL
-and developed a set of properties to capture ISO 14971 concepts in a
-AADL model.</p>
+<p>We took advantage of the user-definable property types feature of AADL
+and developed a set of properties to capture ISO 14971 concepts in an
+AADL model. Installing the Awas Osate plugin provides this template as
+part of the plugin contributions. The Awas plugin can be installed as
+described in section <a class="reference internal" href="../01-getting-started/index.html#sireum-awas-pluging-for-osate"><span class="std std-ref">Sireum Awas pluging for OSATE</span></a>.</p>
 <div class="highlight-aadl notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -412,14 +411,34 @@ AADL model.</p>
 <span class="nc">end</span><span class="w"> </span><span class="nc">ISO14971_80001</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="property-instance">
-<h4><span class="section-number">3.1.3.1. </span>Property instance<a class="headerlink" href="#property-instance" title="Permalink to this headline">¶</a></h4>
+<p>We demonstrate the purpose and use of this property template in the risk
+analysis of AADL models in the following walk-through section.</p>
+</div>
+<div class="section" id="risk-analysis-walk-though-analyst-perspective">
+<h3><span class="section-number">3.1.4. </span>Risk Analysis Walk-though: Analyst Perspective<a class="headerlink" href="#risk-analysis-walk-though-analyst-perspective" title="Permalink to this headline">¶</a></h3>
+<p>As the risk analysis process prescribes, the first step in risk
+analysis is to identify the intended use and misuse of the medical
+device. In the case of an Open PCA pump, the primary purpose of the
+pump is to infuse opioids for pain management. One possible misuse
+would be over infusing of the opioid to the level that it may harm the
+patient. Also, there is a possibility of delivering the wrong drug
+into the patient or in an incorrect dosage.</p>
+<p>The next step would be identifying hazards and hazardous situations. A
+hazardous situation includes the possible triggering mechanism for
+hazards to develop in the system and the ways it can lead to harming
+the patient, clinicians, or the environment.</p>
+<p>In an AADL model with error propagation, hazards are a particular
+combination of errors that may flow through the system’s external
+ports and harm the patient or the user of the device. In the case of
+the PCA pump, over-infusion on the port drug_outlet can cause an
+overdose in the patient when the patient’s health is
+deteriorating. With the following instantiation of ISO14971
+properties, we can capture the hazardous scenario in the AADL model.</p>
 <ul>
-<li><p>Harm</p>
-<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Harm</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;H1&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Patient Overdosed&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="nc">Severity</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">Catastrophic</span><span class="p">;</span><span class="w"></span>
+<li><p>Hazard</p>
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">Haz1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazard</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Haz1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Drug over-infusion&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
@@ -440,14 +459,23 @@ AADL model.</p>
 </pre></div>
 </div>
 </li>
-<li><p>Hazard</p>
-<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">Haz1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Hazard</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Haz1&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Drug over-infusion&quot;</span><span class="p">;</span><span class="w"></span>
+<li><p>Harm</p>
+<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Harm</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;H1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Description</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;Patient Overdosed&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nc">Severity</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="no">Catastrophic</span><span class="p">;</span><span class="w"></span>
 <span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
+</ul>
+<p>Similar to the hazards, using the properties, an analyst can capture
+the initiating causes leading to the hazards. Followed by, with the
+help of tools such as fault impact analysis, Awas’s reachability
+analysis, etc. An analyst can compute the sequence of events from an
+initiating cause to a hazard. Thus providing a complete picture of a
+hazardous situation.</p>
+<ul>
 <li><p>Initiating Cause</p>
 <div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">IncorrectDrug</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">constant</span><span class="w"> </span><span class="nc">ISO14971_80001::Cause</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">        </span><span class="nc">ID</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;IncorrectDrug&quot;</span><span class="p">;</span><span class="w"></span>
@@ -458,19 +486,16 @@ AADL model.</p>
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="application-of-property">
-<h4><span class="section-number">3.1.3.2. </span>Application of property<a class="headerlink" href="#application-of-property" title="Permalink to this headline">¶</a></h4>
+<p>We associate the EMV2 error type propagation with the ISO 14971
+properties to compute the causality between the initiating causes and
+hazards. In the below property, we associate the earlier defined
+hazard ‘Haz1’ with the ‘DrugOver Infusion’ error propagating out of
+the system. Similarly, we can associate the cause
+‘FrequentButtonPress’ with the error ‘TooSoonPress’ on port’
+patient_button_press’. One can calculate the causality relation
+between the cause ‘FrequentButtonPress’ and hazard ‘Haz1’ by computing
+the reachability between these two port-error pairs.</p>
 <ul>
-<li><p>Hazardous Situation</p>
-<div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">ISO14971_80001</span><span class="p">::</span><span class="nc">Hazardous_Situations</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">OverInfusion</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">UnderInfusion</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nc">HazardousSituations</span><span class="p">::</span><span class="nv">IncorrectDrug</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</li>
 <li><p>Hazard</p>
 <div class="highlight-aadlproperty notranslate"><div class="highlight"><pre><span></span><span class="nv">ISO14971_80001</span><span class="p">::</span><span class="nc">Hazards</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nc">Hazards</span><span class="p">::</span><span class="nv">Haz1</span><span class="p">)</span><span class="w"> </span><span class="kd">applies</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="nc">act.drug_outlet.DrugOverInfusion</span><span class="p">;</span><span class="w"></span>
 </pre></div>
@@ -483,17 +508,49 @@ AADL model.</p>
 </li>
 </ul>
 </div>
-</div>
 <div class="section" id="awas-visualization">
-<h3><span class="section-number">3.1.4. </span>Awas Visualization<a class="headerlink" href="#awas-visualization" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.5. </span>Awas Visualization<a class="headerlink" href="#awas-visualization" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/awas-viz.png"><img alt="Awas Visualization" class="align-center" src="../../_images/awas-viz.png" style="width: 90%;" /></a>
+<p>An analyst can use the Awas visualizer demonstrated in section
+<span class="xref std std-ref">Sireum Awas Visualizer</span> to identify and communicate casual
+relationships to develop an appropriate mitigation strategy. Backward
+reachability from the port-error associated with the hazards can
+provide all the initiating causes and the following sequence of events
+that lead to the hazard. With the project causal path on the model, an
+analyst can identify missed out causes, appropriate mitigation
+strategy, and communicate with the rest of the engineering team.</p>
+<p>The link below provides the visualization for the Open PCA Pump model.</p>
 <big><big><big><b>
 <a href="../../_static/open-pca/index.html" target="_blank">Open PCA Pump Awas Visualization</a>
 </b></big></big></big></div>
 <div class="section" id="awas-report">
-<h3><span class="section-number">3.1.5. </span>Awas Report<a class="headerlink" href="#awas-report" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.6. </span>Awas Report<a class="headerlink" href="#awas-report" title="Permalink to this headline">¶</a></h3>
+<p>One of the contributions of this work is the ability to generate a
+report with casual scenarios. The report consists of tables comprising
+the harms, hazards, hazardous situations, initiating causes, and the
+relationship between the causes and hazardous situations in both
+forward and backward directions. The report also includes the model as
+represented in the Awas visualizer. However, this visualizer does not
+include the forward and backward reachability or the querying
+capability. Instead, it highlights the causal paths on clicking the
+table rows with causal relationships.</p>
+<a class="reference internal image-reference" href="../../_images/report-casual-path.png"><img alt="Awas ISO14971 Report with Casual Path" class="align-center" src="../../_images/report-casual-path.png" style="width: 80%;" /></a>
+<p>For better viewing, the analyst can pop out the model into a bigger
+window and view casual relationships. Popping out the model
+visualization enables generating a printable version of the tables and
+including it in the risk management artifacts. The below link provides
+a sample report for the Open PCA Pump model.</p>
 <big><big><big><b>
 <a href="../../_static/open-pca/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a>
-</b></big></big></big></div>
+</b></big></big></big><p>One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps:</p>
+<ol class="arabic simple">
+<li><p>Generate the instance model from the system implementation</p></li>
+<li><p>Select the instance mode and select ‘OSATE -&gt; Sireum HAMR -&gt; Generate Risk Analysis Report’ from the menu</p></li>
+<li><p>Specify a location to write out the generated report</p></li>
+<li><p>Open the ‘risk-analysis-report.html’ in your favorite browser</p></li>
+</ol>
+<p>We have tested the report generation in the latest version of Google Chrome, Microsoft Edge, Mozilla Firefox and Safari.</p>
+</div>
 </div>
 </div>
 
