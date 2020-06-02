@@ -31,7 +31,7 @@ and visualization capabilities are useful in exploring and
 communicating the failure scenarios and in ensuring the effectiveness
 of the measure taken to eliminate failures.
 
-.. _(TL;DR Open PCA Pump Awas ISO 14971 Report): ../../_static/open-pca/risk-analysis-report.html
+.. _(TL;DR Open PCA Pump Awas ISO 14971 Report): ../../_static/open-pca-report/risk-analysis-report.html
 
 ISO 14971/AAMI 80001 `(TL;DR Open PCA Pump Awas ISO 14971 Report)`_
 ********************* 
@@ -318,7 +318,7 @@ The link below provides the visualization for the Open PCA Pump model.
 .. raw:: html
 	 
     <big><big><big><b>
-    <a href="../../_static/open-pca/index.html" target="_blank">Open PCA Pump Awas Visualization</a> 
+    <a href="../../_static/open-pca-viz/index.html" target="_blank">Open PCA Pump Awas Visualization</a> 
     </b></big></big></big>
 
 Awas Report
@@ -348,7 +348,7 @@ a sample report for the Open PCA Pump model.
 .. raw:: html
 	 
     <big><big><big><b>
-    <a href="../../_static/open-pca/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a> 
+    <a href="../../_static/open-pca-report/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a> 
     </b></big></big></big>
  
 One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps: 
