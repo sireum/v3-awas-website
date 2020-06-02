@@ -317,9 +317,9 @@ The link below provides the visualization for the Open PCA Pump model.
 
 .. raw:: html
 	 
-    <big><big><big><b>
+   <big><b>
     <a href="../../_static/open-pca-viz/index.html" target="_blank">Open PCA Pump Awas Visualization</a> 
-    </b></big></big></big>
+    </b></big>
 
 Awas Report
 -----------
@@ -328,11 +328,16 @@ One of the contributions of this work is the ability to generate a
 report with casual scenarios. The report consists of tables comprising
 the harms, hazards, hazardous situations, initiating causes, and the
 relationship between the causes and hazardous situations in both
-forward and backward directions. The report also includes the model as
-represented in the Awas visualizer. However, this visualizer does not
-include the forward and backward reachability or the querying
-capability. Instead, it highlights the causal paths on clicking the
-table rows with causal relationships.
+forward and backward directions. The report also includes the model
+represented in a dedicated version of Awas visualizer that supports
+reporting (this dedicated visualization is linked directly to report
+functionality; for full Awas functionality with forward and backward
+reachability and the querying capability, use the full Awas
+visualization presented in the link above). In the report
+visualization, clicking the table rows will direct Awas to highlight
+automatically discovered error flows through the AADL model that
+reflect with causal relationships between root causes and hazardous
+situations.
 
 .. image:: figures/report-casual-path.png
       :align: center
@@ -347,9 +352,9 @@ a sample report for the Open PCA Pump model.
      
 .. raw:: html
 	 
-    <big><big><big><b>
+    <big><b>
     <a href="../../_static/open-pca-report/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a> 
-    </b></big></big></big>
+    </b></big>
  
 One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps: 
 

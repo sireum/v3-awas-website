@@ -520,29 +520,34 @@ that lead to the hazard. With the project causal path on the model, an
 analyst can identify missed out causes, appropriate mitigation
 strategy, and communicate with the rest of the engineering team.</p>
 <p>The link below provides the visualization for the Open PCA Pump model.</p>
-<big><big><big><b>
-<a href="../../_static/open-pca-viz/index.html" target="_blank">Open PCA Pump Awas Visualization</a>
-</b></big></big></big></div>
+<big><b>
+ <a href="../../_static/open-pca-viz/index.html" target="_blank">Open PCA Pump Awas Visualization</a>
+ </b></big></div>
 <div class="section" id="awas-report">
 <h3><span class="section-number">3.1.6. </span>Awas Report<a class="headerlink" href="#awas-report" title="Permalink to this headline">¶</a></h3>
 <p>One of the contributions of this work is the ability to generate a
 report with casual scenarios. The report consists of tables comprising
 the harms, hazards, hazardous situations, initiating causes, and the
 relationship between the causes and hazardous situations in both
-forward and backward directions. The report also includes the model as
-represented in the Awas visualizer. However, this visualizer does not
-include the forward and backward reachability or the querying
-capability. Instead, it highlights the causal paths on clicking the
-table rows with causal relationships.</p>
+forward and backward directions. The report also includes the model
+represented in a dedicated version of Awas visualizer that supports
+reporting (this dedicated visualization is linked directly to report
+functionality; for full Awas functionality with forward and backward
+reachability and the querying capability, use the full Awas
+visualization presented in the link above). In the report
+visualization, clicking the table rows will direct Awas to highlight
+automatically discovered error flows through the AADL model that
+reflect with causal relationships between root causes and hazardous
+situations.</p>
 <a class="reference internal image-reference" href="../../_images/report-casual-path.png"><img alt="Awas ISO14971 Report with Casual Path" class="align-center" src="../../_images/report-casual-path.png" style="width: 80%;" /></a>
 <p>For better viewing, the analyst can pop out the model into a bigger
 window and view casual relationships. Popping out the model
 visualization enables generating a printable version of the tables and
 including it in the risk management artifacts. The below link provides
 a sample report for the Open PCA Pump model.</p>
-<big><big><big><b>
+<big><b>
 <a href="../../_static/open-pca-report/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a>
-</b></big></big></big><p>One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps:</p>
+</b></big><p>One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps:</p>
 <ol class="arabic simple">
 <li><p>Generate the instance model from the system implementation</p></li>
 <li><p>Select the instance mode and select ‘OSATE -&gt; Sireum HAMR -&gt; Generate Risk Analysis Report’ from the menu</p></li>
