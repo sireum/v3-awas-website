@@ -36,6 +36,8 @@ of the measure taken to eliminate failures.
 ISO 14971/AAMI 80001 `(TL;DR Open PCA Pump Awas ISO 14971 Report)`_
 ********************* 
 
+
+
 In the medical domain, ISO 14971 is the widely adopted international
 standard for risk management. The following sections describe: 
 
@@ -47,6 +49,10 @@ standard for risk management. The following sections describe:
 * Use of Error Modeling Version 2(EMV2) annex and Awas reachability
   analysis to accomplish crucial steps in the ISO 14971 risk
   management process
+
+.. _Model-based Risk Analysis for an Open-Source PCA Pump using the AADL Error Modeling Annex: ../../_static/awas-ISO14971-risk-analysis.pdf
+
+The work on this section is reported on in a currently submitted paper `Model-based Risk Analysis for an Open-Source PCA Pump using the AADL Error Modeling Annex`_
 
 OpenPCA Pump Model
 ------------------
@@ -358,11 +364,21 @@ a sample report for the Open PCA Pump model.
  
 One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps: 
 
-1. Generate the instance model from the system implementation
-2. Select the instance mode and select 'OSATE -> Sireum HAMR -> Generate Risk Analysis Report' from the menu
+1. Generate the instance model from an AADL system implementation (menu 'Help -> Help Contents -> OSATE Core Documentation -> Instantiating Your Model')
+2. Select the generated instance model and select 'OSATE -> Sireum HAMR -> Generate Risk Analysis Report' from the menu
 3. Specify a location to write out the generated report
 4. Open the 'risk-analysis-report.html' in your favorite browser
 
 We have tested the report generation in the latest version of Google Chrome, Microsoft Edge, Mozilla Firefox and Safari.  
 
+Known Issues
+------------
+
+.. _this: https://stackoverflow.com/a/6083677  
+
+Reports generated and stored in the local drive and viewed in the
+broser without a webserver may not work as expected when the model is
+poped out. This is due to the modern browser's security restrictions.
+One can disable the security restrictions by following the instructions
+in this_ link.
  

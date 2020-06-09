@@ -135,6 +135,7 @@ AADL properties to capture risk management concepts</p></li>
 analysis to accomplish crucial steps in the ISO 14971 risk
 management process</p></li>
 </ul>
+<p>The work on this section is reported on in a currently submitted paper <a class="reference external" href="../../_static/awas-ISO14971-risk-analysis.pdf">Model-based Risk Analysis for an Open-Source PCA Pump using the AADL Error Modeling Annex</a></p>
 <div class="section" id="openpca-pump-model">
 <h3><span class="section-number">3.1.1. </span>OpenPCA Pump Model<a class="headerlink" href="#openpca-pump-model" title="Permalink to this headline">¶</a></h3>
 <p>In this section, we illustrate (Open Patient Controlled Analgesic)
@@ -549,12 +550,20 @@ a sample report for the Open PCA Pump model.</p>
 <a href="../../_static/open-pca-report/risk-analysis-report.html" target="_blank">Open PCA Pump Awas ISO 14971 Report</a>
 </b></big><p>One can generate similar report for any AADL model with EMV2 and the ISO14971 properties by following these steps:</p>
 <ol class="arabic simple">
-<li><p>Generate the instance model from the system implementation</p></li>
-<li><p>Select the instance mode and select ‘OSATE -&gt; Sireum HAMR -&gt; Generate Risk Analysis Report’ from the menu</p></li>
+<li><p>Generate the instance model from an AADL system implementation (menu ‘Help -&gt; Help Contents -&gt; OSATE Core Documentation -&gt; Instantiating Your Model’)</p></li>
+<li><p>Select the generated instance model and select ‘OSATE -&gt; Sireum HAMR -&gt; Generate Risk Analysis Report’ from the menu</p></li>
 <li><p>Specify a location to write out the generated report</p></li>
 <li><p>Open the ‘risk-analysis-report.html’ in your favorite browser</p></li>
 </ol>
 <p>We have tested the report generation in the latest version of Google Chrome, Microsoft Edge, Mozilla Firefox and Safari.</p>
+</div>
+<div class="section" id="known-issues">
+<h3><span class="section-number">3.1.7. </span>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h3>
+<p>Reports generated and stored in the local drive and viewed in the
+broser without a webserver may not work as expected when the model is
+poped out. This is due to the modern browser’s security restrictions.
+One can disable the security restrictions by following the instructions
+in <a class="reference external" href="https://stackoverflow.com/a/6083677">this</a> link.</p>
 </div>
 </div>
 </div>
