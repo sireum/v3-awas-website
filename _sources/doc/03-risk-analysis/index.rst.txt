@@ -34,9 +34,7 @@ of the measure taken to eliminate failures.
 .. _(TL;DR Open PCA Pump Awas ISO 14971 Report): ../../_static/open-pca-report/risk-analysis-report.html
 
 ISO 14971/AAMI 80001 `(TL;DR Open PCA Pump Awas ISO 14971 Report)`_
-********************* 
-
-
+******************************************************************* 
 
 In the medical domain, ISO 14971 is the widely adopted international
 standard for risk management. The following sections describe: 
@@ -44,7 +42,26 @@ standard for risk management. The following sections describe:
 * Description of the OpenPCA Pump medical device model
 
 * The application of ISO 14971 to Open PCA Pump model and the use of
-  AADL properties to capture risk management concepts
+  AADL properties to capture risk management concepts. Open PCA Pump
+  Model and the application of ISO 14971 properties available at:
+
+  .. raw:: html
+
+     <table width="100%" > <tr> <td>
+
+  .. code:: bash
+
+     https://gitlab.cs.ksu.edu/open-pca-pump/artifact-open-pca-aadl
+
+  .. raw:: html
+
+     </td> <td style="vertical-align: text-top;"> &nbsp;&nbsp;
+     <button id="copyMacDevelopment"
+     data-clipboard-text="https://gitlab.cs.ksu.edu/open-pca-pump/artifact-open-pca-aadl.git">
+     <img height="20" src="../../_static/clippy.svg" alt="Copy to
+     clipboard"/> </button> </td> </tr> </table> <script> new
+     Clipboard(document.getElementById('copyMacDevelopment'));
+     </script>
 
 * Use of Error Modeling Version 2(EMV2) annex and Awas reachability
   analysis to accomplish crucial steps in the ISO 14971 risk
