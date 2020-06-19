@@ -71,6 +71,10 @@ standard for risk management. The following sections describe:
 
 The work on this section is reported on in a currently submitted paper `Model-based Risk Analysis for an Open-Source PCA Pump using the AADL Error Modeling Annex`_
 
+.. raw:: html
+
+  <iframe src="https://drive.google.com/file/d/1aCNSbSIsfdSusRKR7BP1m4C0o3t3GLuP/preview" width="100%" height="648"></iframe>
+
 OpenPCA Pump Model
 ------------------
 
