@@ -448,8 +448,32 @@ information in a darker shade.</p>
 </dl>
 <a class="reference internal image-reference" href="../../_images/backward_click.png"><img alt="Backward from recv_status" class="align-center" src="../../_images/backward_click.png" style="width: 100%;" /></a>
 </div>
+<div class="section" id="forward-and-backward-analysis-in-osate">
+<h3><span class="section-number">2.4.2. </span>Forward and Backward Analysis in OSATE<a class="headerlink" href="#forward-and-backward-analysis-in-osate" title="Permalink to this headline">¶</a></h3>
+<p>Along with the visualizer, Awas is also integrated with the AADL
+instance diagram. OSATE can generate different kinds of AADL diagrams,
+among them instance diagram shows a specific composition of the
+components in the system.</p>
+The Awas plugin provides these icons <img src="../../_static/osate_awas_buttons.png" alt="Awas-icons"style="width:8%">
+in the AADL diagram views. They correspond to the forward reachability, backward reachability and erase results. The user can
+select a component or port in the AADL instance diagram and on clicking the forward or backward reachability icon, the Awas
+computes the reachability and highlights it on the instance diagram.<a class="reference internal image-reference" href="../../_images/aadl_uas_awas.png"><img alt="Awas result on AADL instance diagram" class="align-center" src="../../_images/aadl_uas_awas.png" style="width: 100%;" /></a>
+<p>The above image show the result of performing a forward reachability
+from the <code class="docutils literal notranslate"><span class="pre">send_map</span></code> port in the <code class="docutils literal notranslate"><span class="pre">GND</span></code> component. Awas computes
+port level reachiability and highlights the connections and ports that
+are reachabile form the <code class="docutils literal notranslate"><span class="pre">send_map</span></code>.  AADL allows user to open the
+subcomponents by right clicking on the corresponding component and
+clicking show contents.</p>
+<a class="reference internal image-reference" href="../../_images/aadl_uav_awas_full.png"><img alt="Awas result on expanded AADL instance diagram" class="align-center" src="../../_images/aadl_uav_awas_full.png" style="width: 100%;" /></a>
+<p>AADL diagrams allows precise customizations of the diagram by hiding
+or showing to get only the interested parts of the system to be
+displayed. Similar to the forward reachability, bacaward reachability
+can be performed from any port or component in the instance diagram.
+The user can export the diagram along with the result of the
+reachability in to images to include it in other reports.</p>
+</div>
 <div class="section" id="dependency-analysis-using-queries">
-<h3><span class="section-number">2.4.2. </span>Dependency Analysis Using Queries<a class="headerlink" href="#dependency-analysis-using-queries" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.3. </span>Dependency Analysis Using Queries<a class="headerlink" href="#dependency-analysis-using-queries" title="Permalink to this headline">¶</a></h3>
 <p>While performing backward and forward analysis is quick and
 straightforward using the buttons, it is not easily reproducible by an
 automated regression testing suite. To remedy this, we provide a
@@ -505,7 +529,7 @@ representation of the port <code class="docutils literal notranslate"><span clas
 </li>
 </ol>
 <div class="section" id="multiple-query-results">
-<h4><span class="section-number">2.4.2.1. </span>Multiple Query Results<a class="headerlink" href="#multiple-query-results" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.4.3.1. </span>Multiple Query Results<a class="headerlink" href="#multiple-query-results" title="Permalink to this headline">¶</a></h4>
 <p>The last button to discuss at the top right corner is the <code class="docutils literal notranslate"><span class="pre">Clear</span></code>
 button. This button’s purpose is to clear the highlights on the
 graph. However, it can be useful to view the results of multiple
@@ -527,7 +551,7 @@ Clipboard(document.getElementById('q2'));
 </script></div>
 </div>
 <div class="section" id="complex-queries">
-<h3><span class="section-number">2.4.3. </span>Complex Queries<a class="headerlink" href="#complex-queries" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.4. </span>Complex Queries<a class="headerlink" href="#complex-queries" title="Permalink to this headline">¶</a></h3>
 <p>The query language’s capability goes beyond the simple queries. Using
 the queries, the user can compose much more interesting questions.</p>
 <dl id="query-3">
@@ -541,7 +565,7 @@ specific node, port or error token.</p>
 </dd>
 </dl>
 <div class="section" id="source-to-destination-query">
-<h4><span class="section-number">2.4.3.1. </span>Source to Destination Query<a class="headerlink" href="#source-to-destination-query" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.4.4.1. </span>Source to Destination Query<a class="headerlink" href="#source-to-destination-query" title="Permalink to this headline">¶</a></h4>
 <a class="reference internal image-reference" href="../../_images/query_chop.png"><img alt="Query with source and destination" class="align-center" src="../../_images/query_chop.png" style="width: 100%;" /></a>
 <p>The following Awas query statement captures the user’s <a class="reference internal" href="#query-3">Query 3</a></p>
 <table width="100%" > <tr> <td><div class="highlight-awas notranslate"><div class="highlight"><pre><span></span><span class="nv">GS_flight_controller</span> <span class="o">=</span> <span class="kr">reach from </span><span class="nc">UAS_Impl_Instance.GND.send_map</span><span class="kr"> to </span><span class="nc">UAS_Impl_Instance.UAV.FCTL.waypoint</span>
@@ -562,7 +586,7 @@ the source and sink are transitively reachable, then Awas highlights
 results, otherwise Awas will indicate the flow is infeasible.</p>
 </div>
 <div class="section" id="path-queries">
-<h4><span class="section-number">2.4.3.2. </span>Path Queries<a class="headerlink" href="#path-queries" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.4.4.2. </span>Path Queries<a class="headerlink" href="#path-queries" title="Permalink to this headline">¶</a></h4>
 <p>Using the previous query, Awas can capture the information flow
 between a source and destination, and yet, there are multiple ways
 information can flow from source to destination. If one wishes to
@@ -624,7 +648,7 @@ Clipboard(document.getElementById('q6'));
 </script><a class="reference internal image-reference" href="../../_images/query_result_ans.png"><img alt="Query result for refined paths" class="align-center" src="../../_images/query_result_ans.png" style="width: 100%;" /></a>
 </div>
 <div class="section" id="path-based-filter">
-<h4><span class="section-number">2.4.3.3. </span>Path Based Filter<a class="headerlink" href="#path-based-filter" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.4.4.3. </span>Path Based Filter<a class="headerlink" href="#path-based-filter" title="Permalink to this headline">¶</a></h4>
 <p>What if only some of the paths listed are of interest to the user?
 Alternatively, what if the user wishes to see only the paths
 flowing through a component of interest. In these situations, the
@@ -796,15 +820,6 @@ ID
 <div class="section" id="known-issues">
 <h2><span class="section-number">2.7. </span>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Integration with the declarative model</p>
-<ul class="simple">
-<li><p>Solution in development:</p>
-<ol class="arabic simple">
-<li><p>Capturing the source location from the instance model into the Awas graphs</p></li>
-</ol>
-</li>
-</ul>
-</li>
 <li><p>High page load time: Currently, the graph rendering and the graph cycles are computed
 during the page load and when enabling or disabling the <code class="docutils literal notranslate"><span class="pre">View</span>
 <span class="pre">binding</span> <span class="pre">edges</span></code>. Therefore, for a large model, this may take a while to compute</p>
