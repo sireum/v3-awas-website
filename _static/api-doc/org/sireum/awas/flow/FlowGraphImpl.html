@@ -1,0 +1,1436 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Sireum documentation  - org.sireum.awas.flow.FlowGraphImpl</title>
+          <meta name="description" content="Sireum documentation - org.sireum.awas.flow.FlowGraphImpl" />
+          <meta name="keywords" content="Sireum documentation org.sireum.awas.flow.FlowGraphImpl" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Sireum documentation<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.sireum" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sireum"></a><a id="sireum:sireum"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sireum</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.sireum.awas" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="awas"></a><a id="awas:awas"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">awas</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.sireum">sireum</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flow"></a><a id="flow:flow"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">flow</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.sireum.awas">awas</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="BasicNode.html" title=""></a>
+                        <a href="BasicNode.html" title="">BasicNode</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="BasicNodeImpl.html" title=""></a>
+                        <a href="BasicNodeImpl.html" title="">BasicNodeImpl</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="FlowEdge$.html" title=""></a>
+                        <a class="trait" href="FlowEdge.html" title=""></a>
+                        <a href="FlowEdge.html" title="">FlowEdge</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="FlowEdgeFactory$.html" title=""></a>
+                        <a href="FlowEdgeFactory$.html" title="">FlowEdgeFactory</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="FlowEdgeImpl$.html" title=""></a>
+                        <a class="class" href="FlowEdgeImpl.html" title=""></a>
+                        <a href="FlowEdgeImpl.html" title="">FlowEdgeImpl</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="FlowGraph$.html" title="Factory Methods to build graph"></a>
+                        <a class="trait" href="FlowGraph.html" title=""></a>
+                        <a href="FlowGraph.html" title="">FlowGraph</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">FlowGraphImpl</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="FlowGraphUpdate.html" title=""></a>
+                        <a href="FlowGraphUpdate.html" title="">FlowGraphUpdate</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="FlowInference$.html" title=""></a>
+                        <a href="FlowInference$.html" title="">FlowInference</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="FlowNode$.html" title=""></a>
+                        <a class="trait" href="FlowNode.html" title=""></a>
+                        <a href="FlowNode.html" title="">FlowNode</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="FlowNodeImpl.html" title=""></a>
+                        <a href="FlowNodeImpl.html" title="">FlowNodeImpl</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="FptcNodeUpdate.html" title=""></a>
+                        <a href="FptcNodeUpdate.html" title="">FptcNodeUpdate</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="NodeType$.html" title=""></a>
+                        <a href="NodeType$.html" title="">NodeType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="STPAHelper$.html" title=""></a>
+                        <a href="STPAHelper$.html" title="">STPAHelper</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="StpaControlStructure$.html" title=""></a>
+                        <a class="trait" href="StpaControlStructure.html" title=""></a>
+                        <a href="StpaControlStructure.html" title="">StpaControlStructure</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="StpaControlStructureImpl.html" title=""></a>
+                        <a href="StpaControlStructureImpl.html" title="">StpaControlStructureImpl</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="org">org</a>.<a href="../../index.html" class="extype" name="org.sireum">sireum</a>.<a href="../index.html" class="extype" name="org.sireum.awas">awas</a>.<a href="index.html" class="extype" name="org.sireum.awas.flow">flow</a></p>
+        <h1>FlowGraphImpl<span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FlowGraphImpl</span><span class="result"> extends <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]] with <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> with <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]], <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]], <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]], <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]], <a href="../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.sireum.awas.flow.FlowGraphImpl"><span>FlowGraphImpl</span></li><li class="in" name="org.sireum.awas.flow.FlowGraphUpdate"><span>FlowGraphUpdate</span></li><li class="in" name="org.sireum.awas.graph.AwasGraphUpdate"><span>AwasGraphUpdate</span></li><li class="in" name="org.sireum.awas.flow.FlowGraph"><span>FlowGraph</span></li><li class="in" name="org.sireum.awas.graph.AwasGraph"><span>AwasGraph</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.sireum.awas.flow.FlowGraphImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(uri:org.sireum.awas.util.AwasUtil.ResourceUri,st:org.sireum.awas.symbol.SymbolTable):org.sireum.awas.flow.FlowGraphImpl"></a><a id="&lt;init&gt;:FlowGraphImpl"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#&lt;init&gt;(uri:org.sireum.awas.util.AwasUtil.ResourceUri,st:org.sireum.awas.symbol.SymbolTable):org.sireum.awas.flow.FlowGraphImpl" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FlowGraphImpl</span><span class="params">(<span name="uri">uri: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>, <span name="st">st: <a href="../symbol/SymbolTable.html" class="extype" name="org.sireum.awas.symbol.SymbolTable">SymbolTable</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.sireum.awas.flow.FlowGraphImpl.EdgeT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeT=org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]"></a><a id="EdgeT:(FlowGraphImpl.this)#EdgeT"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#EdgeT=org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EdgeT</span><span class="result alias"> = <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#H" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="H:org.sireum.awas.symbol.SymbolTableHelper.type"></a><a id="H:SymbolTableHelper.type"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#H:org.sireum.awas.symbol.SymbolTableHelper.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">H</span><span class="result">: <a href="../symbol/SymbolTableHelper$.html" class="extype" name="org.sireum.awas.symbol.SymbolTableHelper">SymbolTableHelper</a>.type</span>
+      </span>
+      
+      
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#addEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode,data:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]):org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]"></a><a id="addEdge(FlowNode,FlowNode,FlowEdge[FlowNode]):FlowEdge[FlowNode]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#addEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode,data:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]):org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEdge</span><span class="params">(<span name="from">from: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="to">to: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="data">data: <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>)</span><span class="result">: <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#addEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="addEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode):FlowGraphImpl.this.EdgeT"></a><a id="addEdge(FlowNode,FlowNode):(FlowGraphImpl.this)#EdgeT"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#addEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode):FlowGraphImpl.this.EdgeT" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEdge</span><span class="params">(<span name="from">from: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="to">to: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: (<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span></span>
+      </span>
+      
+      
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#addEdgePortRelation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addEdgePortRelation(edge:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode],source:org.sireum.awas.util.AwasUtil.ResourceUri,target:org.sireum.awas.util.AwasUtil.ResourceUri):Unit"></a><a id="addEdgePortRelation(FlowEdge[FlowNode],ResourceUri,ResourceUri):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#addEdgePortRelation(edge:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode],source:org.sireum.awas.util.AwasUtil.ResourceUri,target:org.sireum.awas.util.AwasUtil.ResourceUri):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEdgePortRelation</span><span class="params">(<span name="edge">edge: <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>, <span name="source">source: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>, <span name="target">target: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#addNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addNode(n:org.sireum.awas.flow.FlowNode):org.sireum.awas.flow.FlowNode"></a><a id="addNode(FlowNode):FlowNode"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#addNode(n:org.sireum.awas.flow.FlowNode):org.sireum.awas.flow.FlowNode" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addNode</span><span class="params">(<span name="n">n: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#addPortEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addPortEdge(port:org.sireum.awas.util.AwasUtil.ResourceUri,edge:FlowGraphImpl.this.EdgeT):Unit"></a><a id="addPortEdge(ResourceUri,(FlowGraphImpl.this)#EdgeT):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#addPortEdge(port:org.sireum.awas.util.AwasUtil.ResourceUri,edge:FlowGraphImpl.this.EdgeT):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addPortEdge</span><span class="params">(<span name="port">port: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>, <span name="edge">edge: (<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#backwardReach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="backwardReach(criteria:Set[org.sireum.awas.flow.FlowNode]):&lt;error&gt;"></a><a id="backwardReach(scala.Predef.Set[FlowNode]):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#backwardReach(criteria:Set[org.sireum.awas.flow.FlowNode]):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">backwardReach</span><span class="params">(<span name="criteria">criteria: <span class="extype" name="scala.Predef.Set">scala.Predef.Set</span>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#edges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="edges:Iterable[FlowGraphImpl.this.EdgeT]"></a><a id="edges:Iterable[(FlowGraphImpl.this)#EdgeT]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#edges:Iterable[FlowGraphImpl.this.EdgeT]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">edges</span><span class="result">: <a href="../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[(<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#ef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ef:org.sireum.awas.flow.FlowEdgeFactory.type"></a><a id="ef:FlowEdgeFactory.type"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#ef:org.sireum.awas.flow.FlowEdgeFactory.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ef</span><span class="result">: <a href="FlowEdgeFactory$.html" class="extype" name="org.sireum.awas.flow.FlowEdgeFactory">FlowEdgeFactory</a>.type</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#forwardReach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forwardReach(criteria:Set[org.sireum.awas.flow.FlowNode]):&lt;error&gt;"></a><a id="forwardReach(scala.Predef.Set[FlowNode]):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#forwardReach(criteria:Set[org.sireum.awas.flow.FlowNode]):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forwardReach</span><span class="params">(<span name="criteria">criteria: <span class="extype" name="scala.Predef.Set">scala.Predef.Set</span>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getCycles" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCycles:Seq[Seq[org.sireum.awas.flow.FlowNode]]"></a><a id="getCycles:Seq[Seq[FlowNode]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getCycles:Seq[Seq[org.sireum.awas.flow.FlowNode]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCycles</span><span class="result">: <a href="../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Find all simple cycles of a directed graph using the Schwarcfiter and Lauer's algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>Find all simple cycles of a directed graph using the Schwarcfiter and Lauer's algorithm.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>set of cycles</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getDot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDot:String"></a><a id="getDot:scala.Predef.String"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getDot:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDot</span><span class="result">: <span class="extype" name="scala.Predef.String">scala.Predef.String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getEdge(n1:org.sireum.awas.flow.FlowNode,n2:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getEdge(FlowNode,FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getEdge(n1:org.sireum.awas.flow.FlowNode,n2:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdge</span><span class="params">(<span name="n1">n1: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="n2">n2: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getEdgeForPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getEdgeForPort(port:org.sireum.awas.util.AwasUtil.ResourceUri):Set[FlowGraphImpl.this.EdgeT]"></a><a id="getEdgeForPort(ResourceUri):scala.Predef.Set[(FlowGraphImpl.this)#EdgeT]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getEdgeForPort(port:org.sireum.awas.util.AwasUtil.ResourceUri):Set[FlowGraphImpl.this.EdgeT]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdgeForPort</span><span class="params">(<span name="port">port: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">scala.Predef.Set</span>[(<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getEdges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getEdges(n:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getEdges(FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getEdges(n:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdges</span><span class="params">(<span name="n">n: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getEdges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getEdges(sourcePort:org.sireum.awas.util.AwasUtil.ResourceUri,targetPort:org.sireum.awas.util.AwasUtil.ResourceUri):&lt;error&gt;"></a><a id="getEdges(ResourceUri,ResourceUri):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getEdges(sourcePort:org.sireum.awas.util.AwasUtil.ResourceUri,targetPort:org.sireum.awas.util.AwasUtil.ResourceUri):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdges</span><span class="params">(<span name="sourcePort">sourcePort: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>, <span name="targetPort">targetPort: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getInPortNodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInPortNodes:&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getInPortNodes:&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInPortNodes</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getIncomingEdges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getIncomingEdges(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getIncomingEdges(FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getIncomingEdges(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getIncomingEdges</span><span class="params">(<span name="node">node: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNode(uri:org.sireum.awas.util.AwasUtil.ResourceUri):Option[org.sireum.awas.flow.FlowNode]"></a><a id="getNode(ResourceUri):scala.Option[FlowNode]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getNode(uri:org.sireum.awas.util.AwasUtil.ResourceUri):Option[org.sireum.awas.flow.FlowNode]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNode</span><span class="params">(<span name="uri">uri: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">scala.Option</span>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNode(n:org.sireum.awas.flow.FlowNode):org.sireum.awas.flow.FlowNode"></a><a id="getNode(FlowNode):FlowNode"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getNode(n:org.sireum.awas.flow.FlowNode):org.sireum.awas.flow.FlowNode" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNode</span><span class="params">(<span name="n">n: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getOutPortNodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutPortNodes:&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getOutPortNodes:&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutPortNodes</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getOutgoingEdges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutgoingEdges(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getOutgoingEdges(FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getOutgoingEdges(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutgoingEdges</span><span class="params">(<span name="node">node: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getPortsFromEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPortsFromEdge(edge:FlowGraphImpl.this.EdgeT):Option[(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)]"></a><a id="getPortsFromEdge((FlowGraphImpl.this)#EdgeT):scala.Option[(ResourceUri,ResourceUri)]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getPortsFromEdge(edge:FlowGraphImpl.this.EdgeT):Option[(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPortsFromEdge</span><span class="params">(<span name="edge">edge: (<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">scala.Option</span>[(<a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>, <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>)]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getPredecessorError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPredecessorError(tuple:(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)):org.sireum.awas.collector.FlowErrorNextCollector"></a><a id="getPredecessorError((ResourceUri,ResourceUri)):FlowErrorNextCollector"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getPredecessorError(tuple:(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)):org.sireum.awas.collector.FlowErrorNextCollector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPredecessorError</span><span class="params">(<span name="tuple">tuple: (<a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>, <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>)</span>)</span><span class="result">: <a href="../collector/FlowErrorNextCollector.html" class="extype" name="org.sireum.awas.collector.FlowErrorNextCollector">FlowErrorNextCollector</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getPredecessorNodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPredecessorNodes(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getPredecessorNodes(FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getPredecessorNodes(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPredecessorNodes</span><span class="params">(<span name="node">node: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getPredecessorPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPredecessorPorts(port:org.sireum.awas.util.AwasUtil.ResourceUri):org.sireum.awas.collector.FlowCollector"></a><a id="getPredecessorPorts(ResourceUri):FlowCollector"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getPredecessorPorts(port:org.sireum.awas.util.AwasUtil.ResourceUri):org.sireum.awas.collector.FlowCollector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPredecessorPorts</span><span class="params">(<span name="port">port: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: <a href="../collector/FlowCollector.html" class="extype" name="org.sireum.awas.collector.FlowCollector">FlowCollector</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getSCC" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSCC:Seq[Set[org.sireum.awas.flow.FlowNode]]"></a><a id="getSCC:Seq[scala.Predef.Set[FlowNode]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getSCC:Seq[Set[org.sireum.awas.flow.FlowNode]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSCC</span><span class="result">: <a href="../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Predef.Set">scala.Predef.Set</span>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getSuccessorError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSuccessorError(tuple:(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)):org.sireum.awas.collector.FlowErrorNextCollector"></a><a id="getSuccessorError((ResourceUri,ResourceUri)):FlowErrorNextCollector"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getSuccessorError(tuple:(org.sireum.awas.util.AwasUtil.ResourceUri,org.sireum.awas.util.AwasUtil.ResourceUri)):org.sireum.awas.collector.FlowErrorNextCollector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuccessorError</span><span class="params">(<span name="tuple">tuple: (<a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>, <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a>)</span>)</span><span class="result">: <a href="../collector/FlowErrorNextCollector.html" class="extype" name="org.sireum.awas.collector.FlowErrorNextCollector">FlowErrorNextCollector</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getSuccessorNodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSuccessorNodes(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;"></a><a id="getSuccessorNodes(FlowNode):&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getSuccessorNodes(node:org.sireum.awas.flow.FlowNode):&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuccessorNodes</span><span class="params">(<span name="node">node: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getSuccessorPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSuccessorPorts(port:org.sireum.awas.util.AwasUtil.ResourceUri):org.sireum.awas.collector.FlowCollector"></a><a id="getSuccessorPorts(ResourceUri):FlowCollector"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getSuccessorPorts(port:org.sireum.awas.util.AwasUtil.ResourceUri):org.sireum.awas.collector.FlowCollector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuccessorPorts</span><span class="params">(<span name="port">port: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>)</span><span class="result">: <a href="../collector/FlowCollector.html" class="extype" name="org.sireum.awas.collector.FlowCollector">FlowCollector</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#getUri" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getUri:org.sireum.awas.util.AwasUtil.ResourceUri"></a><a id="getUri:ResourceUri"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#getUri:org.sireum.awas.util.AwasUtil.ResourceUri" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getUri</span><span class="result">: <a href="../util/AwasUtil$.html#ResourceUri=String" class="extmbr" name="org.sireum.awas.util.AwasUtil.ResourceUri">ResourceUri</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#hasEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasEdge(n1:org.sireum.awas.flow.FlowNode,n2:org.sireum.awas.flow.FlowNode):Boolean"></a><a id="hasEdge(FlowNode,FlowNode):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#hasEdge(n1:org.sireum.awas.flow.FlowNode,n2:org.sireum.awas.flow.FlowNode):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasEdge</span><span class="params">(<span name="n1">n1: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="n2">n2: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#hasNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasNode(n:org.sireum.awas.flow.FlowNode):Boolean"></a><a id="hasNode(FlowNode):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#hasNode(n:org.sireum.awas.flow.FlowNode):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasNode</span><span class="params">(<span name="n">n: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#nodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodes:Iterable[org.sireum.awas.flow.FlowNode]"></a><a id="nodes:Iterable[FlowNode]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#nodes:Iterable[org.sireum.awas.flow.FlowNode]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodes</span><span class="result">: <a href="../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#numOfEdges" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="numOfEdges:&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#numOfEdges:&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numOfEdges</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#numOfNodes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="numOfNodes:&lt;error&gt;"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#numOfNodes:&lt;error&gt;" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numOfNodes</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#reComputeCycles" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reComputeCycles():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#reComputeCycles():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reComputeCycles</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#removeEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode):Unit"></a><a id="removeEdge(FlowNode,FlowNode):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#removeEdge(from:org.sireum.awas.flow.FlowNode,to:org.sireum.awas.flow.FlowNode):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeEdge</span><span class="params">(<span name="from">from: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>, <span name="to">to: <a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#setDot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setDot(updatedToDot:()=&gt;String):Unit"></a><a id="setDot(()⇒scala.Predef.String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#setDot(updatedToDot:()=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDot</span><span class="params">(<span name="updatedToDot">updatedToDot: () ⇒ <span class="extype" name="scala.Predef.String">scala.Predef.String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#setEdgeToST" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setEdgeToST(f:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]=&gt;org.sireum.ST):Unit"></a><a id="setEdgeToST((FlowEdge[FlowNode])⇒ST):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#setEdgeToST(f:org.sireum.awas.flow.FlowEdge[org.sireum.awas.flow.FlowNode]=&gt;org.sireum.ST):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setEdgeToST</span><span class="params">(<span name="f">f: (<a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]) ⇒ <span class="extype" name="org.sireum.ST">ST</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#setGraphAttributes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setGraphAttributes(attributes:&lt;error&gt;):Unit"></a><a id="setGraphAttributes(&lt;error&gt;):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#setGraphAttributes(attributes:&lt;error&gt;):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setGraphAttributes</span><span class="params">(<span name="attributes">attributes: &lt;error&gt;</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#setNodeToST" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setNodeToST(f:org.sireum.awas.flow.FlowNode=&gt;org.sireum.ST):Unit"></a><a id="setNodeToST((FlowNode)⇒ST):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#setNodeToST(f:org.sireum.awas.flow.FlowNode=&gt;org.sireum.ST):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setNodeToST</span><span class="params">(<span name="f">f: (<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>) ⇒ <span class="extype" name="org.sireum.ST">ST</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a> → <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a></dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#superClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="superClass:org.sireum.awas.graph.AwasGraph[org.sireum.awas.flow.FlowNode,FlowGraphImpl.this.EdgeT]withorg.sireum.awas.graph.AwasGraphUpdate[org.sireum.awas.flow.FlowNode,FlowGraphImpl.this.EdgeT]"></a><a id="superClass:AwasGraph[FlowNode,(FlowGraphImpl.this)#EdgeT]withAwasGraphUpdate[FlowNode,(FlowGraphImpl.this)#EdgeT]"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#superClass:org.sireum.awas.graph.AwasGraph[org.sireum.awas.flow.FlowNode,FlowGraphImpl.this.EdgeT]withorg.sireum.awas.graph.AwasGraphUpdate[org.sireum.awas.flow.FlowNode,FlowGraphImpl.this.EdgeT]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">superClass</span><span class="result">: <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, (<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span>] with <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, (<a href="" class="extype" name="org.sireum.awas.flow.FlowGraphImpl">FlowGraphImpl</a>.this)#<span class="extype" name="org.sireum.awas.flow.FlowGraphImpl.EdgeT">EdgeT</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a><a id="toString():java.lang.String"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">java.lang.String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.sireum.awas.flow.FlowGraphImpl#useSlangGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="useSlangGraph:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#useSlangGraph:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useSlangGraph</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/sireum/awas/flow/FlowGraphImpl.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.sireum.awas.flow.FlowGraphUpdate">
+              <h3>Inherited from <a href="FlowGraphUpdate.html" class="extype" name="org.sireum.awas.flow.FlowGraphUpdate">FlowGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</h3>
+            </div><div class="parent" name="org.sireum.awas.graph.AwasGraphUpdate">
+              <h3>Inherited from <a href="../graph/AwasGraphUpdate.html" class="extype" name="org.sireum.awas.graph.AwasGraphUpdate">AwasGraphUpdate</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</h3>
+            </div><div class="parent" name="org.sireum.awas.flow.FlowGraph">
+              <h3>Inherited from <a href="FlowGraph.html" class="extype" name="org.sireum.awas.flow.FlowGraph">FlowGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</h3>
+            </div><div class="parent" name="org.sireum.awas.graph.AwasGraph">
+              <h3>Inherited from <a href="../graph/AwasGraph.html" class="extype" name="org.sireum.awas.graph.AwasGraph">AwasGraph</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>, <a href="FlowEdge.html" class="extype" name="org.sireum.awas.flow.FlowEdge">FlowEdge</a>[<a href="FlowNode.html" class="extype" name="org.sireum.awas.flow.FlowNode">FlowNode</a>]]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
