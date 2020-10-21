@@ -95,7 +95,7 @@ Awas in your project.
 	  
 	<dependency> <groupId>com.github.sireum</groupId>
 	    <artifactId>v3-awas</artifactId>
-	    <version>-SNAPSHOT</version>
+	    <version>master-SNAPSHOT</version>
 	</dependency>
 
 .. _Using Awas source:
